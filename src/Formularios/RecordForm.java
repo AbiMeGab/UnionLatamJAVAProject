@@ -5,20 +5,20 @@
 package Formularios;
 
 import java.awt.Color;
-import Clases.Registro;
-import Clases.usuario;
+import Clases.Record;
+import Clases.User;
 
 /**
  *
  * @author HP VICTUS
  */
-public class RegistroForm extends javax.swing.JFrame {
+public class RecordForm extends javax.swing.JFrame {
     
-
+       private Record record;
     /**
      * Creates new form Registro
      */
-    public RegistroForm() {
+    public RecordForm() {
         initComponents();
         int screenHeight = this.getHeight(); // Obtiene el alto de la pantalla
     int screenWidth = this.getWidth(); // Obtiene el ancho de la pantalla
@@ -28,7 +28,7 @@ public class RegistroForm extends javax.swing.JFrame {
     this.setLocationRelativeTo(null);  
     jLabel9.setForeground(Color.white);
     jLabel10.setForeground(Color.white);
-    Registro registro = new Registro();
+    record = new Record();
     
     
     
@@ -223,7 +223,7 @@ public class RegistroForm extends javax.swing.JFrame {
         String Confpassword = ConPassword.getText();
         
          if (fullname.isEmpty() || email.isEmpty() || password.isEmpty() || Confpassword.isEmpty()) {
-        System.out.println("Por favor, complete todos los campos.");
+        System.out.println("Please complete all fields.");
         return;
         }
     
@@ -231,11 +231,12 @@ public class RegistroForm extends javax.swing.JFrame {
         System.out.println("La contraseña y la confirmación de contraseña no coinciden.");
         return;
         }
-        usuario NuevoUsuario = new usuario (fullname,phoneNumber, email, password,Confpassword);
+        User NuevoUsuario = new User (fullname,phoneNumber, email,password,Confpassword);
+        
+        record.addData(NuevoUsuario);
         
         
-        
-        
+        record.printData();
          
     }//GEN-LAST:event_BotRegisterActionPerformed
 
@@ -258,21 +259,23 @@ public class RegistroForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistroForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RecordForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistroForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RecordForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistroForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RecordForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistroForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RecordForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RegistroForm().setVisible(true);
+                new RecordForm().setVisible(true);
             }
         });
     }
