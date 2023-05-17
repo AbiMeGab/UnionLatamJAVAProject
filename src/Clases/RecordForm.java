@@ -26,7 +26,7 @@ public class RecordForm extends javax.swing.JFrame {
         initComponents();
         int screenHeight = this.getHeight(); // Obtiene el alto de la pantalla
     int screenWidth = this.getWidth(); // Obtiene el ancho de la pantalla
-    int formWidth = (int) (screenWidth * 1.8); // Calcula el ancho del formulario como el 80% del ancho de la pantalla
+    int formWidth = (int) (screenWidth * 0.93); // Calcula el ancho del formulario como el 80% del ancho de la pantalla
     int formHeight = (int) (screenHeight * 1); // Calcula el alto del formulario como el 60% del alto de la pantalla
     this.setSize(formWidth, formHeight); // Establece el tamaño del formulario
     this.setLocationRelativeTo(null);  
