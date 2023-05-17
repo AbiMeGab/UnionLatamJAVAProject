@@ -4,39 +4,31 @@
  */
 package Clases;
 
+import java.util.Vector;
+
 /**
  *
  * @author HP VICTUS
  */
 public class Record {
-    public User[] data;
-    public int index;
+    
+    private static Vector<User> users = new Vector<User>();
     
     
-    public Record() {
-        data = new User[100];
-        this.index = 0;
-    
-    }
-    
-    public void addData(User person){
-        
-        if (index < data.length){
-            data[index] = person;
-            index++;
-        }
-        else {
-            System.out.println("there is not enough space to store");
-        }
+    public static void add (User Person) {
+        users.addElement(Person);
     }
         
-    public void printData(){
+    public static Vector Show (){
+     return users;   
+    }
+   /* public void printData(){
         System.out.println("recorded data:");
         for (int i = 0; i < index; i++) {
-        System.out.println(data[i].toString());
+        System.out.println(Users[i].toString());
     }    
         
-    }   
+    }*/
     
     
 }

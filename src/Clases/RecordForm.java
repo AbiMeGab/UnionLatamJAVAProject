@@ -2,11 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Formularios;
+package Clases;
 
+import Clases.LoginForm;
 import java.awt.Color;
 import Clases.Record;
 import Clases.User;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,6 +21,8 @@ public class RecordForm extends javax.swing.JFrame {
      * Creates new form Registro
      */
     public RecordForm() {
+        
+        
         initComponents();
         int screenHeight = this.getHeight(); // Obtiene el alto de la pantalla
     int screenWidth = this.getWidth(); // Obtiene el ancho de la pantalla
@@ -29,6 +33,7 @@ public class RecordForm extends javax.swing.JFrame {
     jLabel9.setForeground(Color.white);
     jLabel10.setForeground(Color.white);
     record = new Record();
+    
     
     
     
@@ -64,7 +69,6 @@ public class RecordForm extends javax.swing.JFrame {
         BotRegister = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 700));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(500, 700));
@@ -132,6 +136,11 @@ public class RecordForm extends javax.swing.JFrame {
 
         Rsign_up.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         Rsign_up.setText("Sign in ");
+        Rsign_up.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Rsign_upActionPerformed(evt);
+            }
+        });
 
         BotRegister.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         BotRegister.setText("Register");
@@ -216,69 +225,40 @@ public class RecordForm extends javax.swing.JFrame {
 
     private void BotRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotRegisterActionPerformed
                  
+        
         String fullname = Fullname.getText();
-        int phoneNumber =  Integer.parseInt(PhoneNumber.getText());
+        int SphoneNumber = Integer.parseInt(PhoneNumber.getText());
         String email = Email.getText();
         String password = Password.getText();
         String Confpassword = ConPassword.getText();
         
-         if (fullname.isEmpty() || email.isEmpty() || password.isEmpty() || Confpassword.isEmpty()) {
-        System.out.println("Please complete all fields.");
-        return;
+        User Person = new User();
+        if (User.verifyNewUser(fullname) == -1) {
+            Person.setFullname(fullname);
+            Person.setConfirmPassword(Confpassword);
+            Person.setPhonenumber(SphoneNumber);
+            Person.setPassword(password);
+            Person.setEmail(email);
+            Record.add(Person);
+            JOptionPane.showMessageDialog(this, "you have successfully registered");
         }
-    
-        if (!password.equals(Confpassword)) {
-        System.out.println("La contraseña y la confirmación de contraseña no coinciden.");
-        return;
+        else{
+            JOptionPane.showMessageDialog(this, "this user is already registered");
         }
-        User NuevoUsuario = new User (fullname,phoneNumber, email,password,Confpassword);
-        
-        record.addData(NuevoUsuario);
-        
-        
-        record.printData();
-         
     }//GEN-LAST:event_BotRegisterActionPerformed
+
+    private void Rsign_upActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rsign_upActionPerformed
+        
+       LoginForm Login2 = new LoginForm();
+       Login2.setVisible(true);
+       this.dispose();
+        
+    }//GEN-LAST:event_Rsign_upActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        
-      
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RecordForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RecordForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RecordForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RecordForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new RecordForm().setVisible(true);
-            }
-        });
-    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotRegister;
