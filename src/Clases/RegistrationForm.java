@@ -17,6 +17,13 @@ import javax.swing.JOptionPane;
 public class RegistrationForm extends javax.swing.JFrame {
     
        private Registration record;
+       private LoginForm loginFormView;
+
+
+    public void setLoginFormView(LoginForm loginFormView) {
+        this.loginFormView = loginFormView;
+    }
+
     /**
      * Creates new form Registro
      */
@@ -248,9 +255,10 @@ public class RegistrationForm extends javax.swing.JFrame {
                     Person.setEmail(email);
                     Registration.add(Person);
                     JOptionPane.showMessageDialog(this, "you have successfully registered");
-                    LoginForm Login2 = new LoginForm();
-                    Login2.setVisible(true);
-                    this.dispose();
+//                    LoginForm Login2 = new LoginForm();
+//                    Login2.setVisible(true);
+//                    this.dispose();
+                    navigateToLogin();
                 }
                 else{
                     JOptionPane.showMessageDialog(this, "this user is already registered");
@@ -266,12 +274,18 @@ public class RegistrationForm extends javax.swing.JFrame {
     }//GEN-LAST:event_BotRegisterActionPerformed
 
     private void Rsign_upActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rsign_upActionPerformed
-        
-       LoginForm Login2 = new LoginForm();
-       Login2.setVisible(true);
-       this.dispose();
+        navigateToLogin();
         
     }//GEN-LAST:event_Rsign_upActionPerformed
+
+
+    /**
+     * Method to navigate to the login form view
+     */
+    public void navigateToLogin(){
+        this.loginFormView.setVisible(true);
+        this.setVisible(false);
+    }
 
     /**
      * @param args the command line arguments

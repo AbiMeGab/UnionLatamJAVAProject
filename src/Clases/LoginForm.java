@@ -17,6 +17,12 @@ public class LoginForm extends javax.swing.JFrame {
     
     
     private Registration UseRecord;
+    private RegistrationForm registrationFormView;
+
+
+    public void setRegistrationFormView(RegistrationForm registrationFormView) {
+        this.registrationFormView = registrationFormView;
+    }
 
     /**
      * Creates new form form
@@ -232,11 +238,19 @@ public class LoginForm extends javax.swing.JFrame {
         
     }//GEN-LAST:event_LogSignActionPerformed
 
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        RegistrationForm OpenRecord = new RegistrationForm();
-        OpenRecord.setVisible(true);
-        this.dispose();
+        navigateToRegistrationForm();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    /**
+     * Method to navigate to the registration form
+     * 
+     */
+    private void navigateToRegistrationForm(){
+        this.registrationFormView.setVisible(true);
+        this.setVisible(false);
+    }
 
     /**
      * @param args the command line arguments
