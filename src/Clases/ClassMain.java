@@ -14,6 +14,7 @@ public class ClassMain {
     public static void main(String[] args) {
          LoginForm Logueo = new LoginForm();
          Logueo.setVisible(true);
+         
     } 
     
 }

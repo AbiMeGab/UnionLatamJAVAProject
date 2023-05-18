@@ -10,16 +10,18 @@ import java.util.Vector;
  *
  * @author HP VICTUS
  */
-public class Record {
+public class Registration {
     
     private static Vector<User> users = new Vector<User>();
     
     
     public static void add (User Person) {
         users.addElement(Person);
+        
+        
     }
         
-    public static Vector Show (){
+    public static Vector Show(){
      return users;   
     }
    /* public void printData(){

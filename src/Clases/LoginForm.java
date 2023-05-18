@@ -5,7 +5,7 @@
 package Clases;
 
 import java.awt.Color;
-import Clases.Record;
+import Clases.Registration;
 import Clases.User;
 import javax.swing.JOptionPane;
 
@@ -16,16 +16,16 @@ import javax.swing.JOptionPane;
 public class LoginForm extends javax.swing.JFrame {
     
     
-    private Record UseRecord;
+    private Registration UseRecord;
 
     /**
      * Creates new form form
      * 
      *
      */
-    private RecordForm recordForm;
+    private RegistrationForm recordForm;
     
-    RecordForm formulario = new RecordForm();
+    RegistrationForm formulario = new RegistrationForm();
     
     public LoginForm() {
     
@@ -39,7 +39,7 @@ public class LoginForm extends javax.swing.JFrame {
     this.setLocationRelativeTo(this); // Centra el formulario en la pantalla
     jLabel7.setForeground(Color.white);
     jLabel5.setForeground(Color.white);
-   UseRecord = new Record();
+   UseRecord = new Registration();
    
 }
 
@@ -220,17 +220,20 @@ public class LoginForm extends javax.swing.JFrame {
         int ind = User.verifyLogin(Email, Password);
         
         if (ind == -1 ){
-            JOptionPane.showMessageDialog(this, "Incorrect username or password");
+            JOptionPane.showMessageDialog(this, "Incorrect email or password");
         }
         else{
             JOptionPane.showMessageDialog(this, "Iniciar session");
+            CoursesForm Courses = new CoursesForm();
+            Courses.setVisible(true);
+            this.dispose();
         }
    
         
     }//GEN-LAST:event_LogSignActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        RecordForm OpenRecord = new RecordForm();
+        RegistrationForm OpenRecord = new RegistrationForm();
         OpenRecord.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

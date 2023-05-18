@@ -60,7 +60,7 @@ public class User {
     }
     
     public static Vector Show() {
-    return Record.Show();
+    return Registration.Show();
     }
     
     public static int verifyNewUser(String usuario) {
@@ -78,6 +78,7 @@ public class User {
     
     public static int verifyLogin(String email,String password){
        Vector list = Show();
+       
        User Obj;
        for (int i = 0; i < list.size();i++){
            Obj = (User) list.elementAt(i);

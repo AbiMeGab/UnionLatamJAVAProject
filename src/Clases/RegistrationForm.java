@@ -6,7 +6,7 @@ package Clases;
 
 import Clases.LoginForm;
 import java.awt.Color;
-import Clases.Record;
+import Clases.Registration;
 import Clases.User;
 import javax.swing.JOptionPane;
 
@@ -14,13 +14,13 @@ import javax.swing.JOptionPane;
  *
  * @author HP VICTUS
  */
-public class RecordForm extends javax.swing.JFrame {
+public class RegistrationForm extends javax.swing.JFrame {
     
-       private Record record;
+       private Registration record;
     /**
      * Creates new form Registro
      */
-    public RecordForm() {
+    public RegistrationForm() {
         
         
         initComponents();
@@ -32,7 +32,7 @@ public class RecordForm extends javax.swing.JFrame {
     this.setLocationRelativeTo(null);  
     jLabel9.setForeground(Color.white);
     jLabel10.setForeground(Color.white);
-    record = new Record();
+    record = new Registration();
     
     
     
@@ -227,24 +227,42 @@ public class RecordForm extends javax.swing.JFrame {
                  
         
         String fullname = Fullname.getText();
-        int SphoneNumber = Integer.parseInt(PhoneNumber.getText());
+        String SphoneNumber = PhoneNumber.getText();
         String email = Email.getText();
         String password = Password.getText();
         String Confpassword = ConPassword.getText();
         
         User Person = new User();
-        if (User.verifyNewUser(fullname) == -1) {
-            Person.setFullname(fullname);
-            Person.setConfirmPassword(Confpassword);
-            Person.setPhonenumber(SphoneNumber);
-            Person.setPassword(password);
-            Person.setEmail(email);
-            Record.add(Person);
-            JOptionPane.showMessageDialog(this, "you have successfully registered");
+        
+        if (fullname.equalsIgnoreCase("") || email.equalsIgnoreCase("") || password.equalsIgnoreCase("") || Confpassword.equalsIgnoreCase("") || SphoneNumber.equalsIgnoreCase("")) {
+            JOptionPane.showMessageDialog(this, "please complete all fields");
+            //return;
+        }else{
+            if (password.equals(Confpassword)){
+                
+                if (User.verifyNewUser(fullname) == -1) {
+                    Person.setFullname(fullname);
+                    Person.setConfirmPassword(Confpassword);
+                    Person.setPhonenumber(Integer.parseInt(SphoneNumber));
+                    Person.setPassword(password);
+                    Person.setEmail(email);
+                    Registration.add(Person);
+                    JOptionPane.showMessageDialog(this, "you have successfully registered");
+                    LoginForm Login2 = new LoginForm();
+                    Login2.setVisible(true);
+                    this.dispose();
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "this user is already registered");
+                }
+            }else{
+                 
+                JOptionPane.showMessageDialog(this, "the password confirmation is incorrect");
+                return;
+           }
         }
-        else{
-            JOptionPane.showMessageDialog(this, "this user is already registered");
-        }
+        
+       
     }//GEN-LAST:event_BotRegisterActionPerformed
 
     private void Rsign_upActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rsign_upActionPerformed
