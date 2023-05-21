@@ -1,38 +1,58 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Clases;
 
-import java.util.Vector;
+public class User implements UserModel {
 
-/**
- *
- * @author HP VICTUS
- */
-public class User {
-    
-    private String Fullname;
-    private int Phonenumber;
-    private String email;
-    private String password;
-    private String confirmPassword;
-    
+    public String role = "";
+    String id = "";
+    String fullName = "";
+    String phoneNumber = "";
+    String email = "";
+    String password = "";
 
-    public String getFullname() {
-        return Fullname;
+
+    public User(String id, String fullName, String phoneNumber, String email, String password) {
+        this.id = id;
+        this.fullName = fullName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.password = password;
     }
 
-    public void setFullname(String Fullname) {
-        this.Fullname = Fullname;
+    public User() {
+
     }
 
-    public int getPhonenumber() {
-        return Phonenumber;
+    public User(String id, String fullName, String phoneNumber, String email, String password, String role) {
+        this.id = id;
+        this.fullName = fullName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.password = password;
+        this.role = role;
     }
 
-    public void setPhonenumber(int Phonenumber) {
-        this.Phonenumber = Phonenumber;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {
@@ -50,52 +70,18 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public String getConfirmPassword() {
-        return confirmPassword;
-    }
-   
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
+    
+    public String getRole(){
+        return role;
     }
     
-    public static Vector Show() {
-    return Registration.Show();
-    }
-    
-    public static int verifyNewUser(String usuario) {
-        Vector list = Show();
-        User Odj;
-        for(int i =0; i<list.size();i++){
-            Odj = (User) list.elementAt(i);
-            if (Odj.getFullname().equalsIgnoreCase(usuario)){
-                return 1;
-            }
-        }
-        return -1;
-    }
-    
-    
-    public static int verifyLogin(String email,String password){
-       Vector list = Show();
-       
-       User Obj;
-       for (int i = 0; i < list.size();i++){
-           Obj = (User) list.elementAt(i);
-           if (Obj.getEmail().equalsIgnoreCase(email) && Obj.getPassword().equalsIgnoreCase(password)) {
-               return i;
-           }
-          
-       }
-       return -1;
+    public void setRole(String role){
+        this.role = role;
     }
 
-@Override
-    public String toString() {
-        return "Nombre completo: " + Fullname + ", Teléfono: " + Phonenumber + ", Email: " + email + ", Password: " + password + ", ConfirPassword: " + confirmPassword;
+    public boolean comparePassword(String password) {
+        return this.password.equals(password);
     }
-
-
 }
 
 

@@ -6,6 +6,8 @@ package Clases;
 
 import Clases.LoginForm;
 import java.awt.Color;
+import java.util.UUID;
+
 import Clases.Registration;
 import Clases.User;
 import javax.swing.JOptionPane;
@@ -18,10 +20,15 @@ public class RegistrationForm extends javax.swing.JFrame {
     
        private Registration record;
        private LoginForm loginFormView;
+       private UserStorage userStorage;
 
 
     public void setLoginFormView(LoginForm loginFormView) {
         this.loginFormView = loginFormView;
+    }
+    
+    public void setUserStorage(UserStorage userStorage) {
+        this.userStorage = userStorage;
     }
 
     /**
@@ -234,42 +241,44 @@ public class RegistrationForm extends javax.swing.JFrame {
                  
         
         String fullname = Fullname.getText();
-        String SphoneNumber = PhoneNumber.getText();
-        String email = Email.getText();
-        String password = Password.getText();
-        String Confpassword = ConPassword.getText();
+        String phonenumber = PhoneNumber.getText();
+        String emailValue = Email.getText();
+        String password = String.valueOf(Password.getPassword());
+        String confirmpassword = String.valueOf(ConPassword.getPassword());
         
-        User Person = new User();
         
-        if (fullname.equalsIgnoreCase("") || email.equalsIgnoreCase("") || password.equalsIgnoreCase("") || Confpassword.equalsIgnoreCase("") || SphoneNumber.equalsIgnoreCase("")) {
-            JOptionPane.showMessageDialog(this, "please complete all fields");
-            //return;
-        }else{
-            if (password.equals(Confpassword)){
-                
-                if (User.verifyNewUser(fullname) == -1) {
-                    Person.setFullname(fullname);
-                    Person.setConfirmPassword(Confpassword);
-                    Person.setPhonenumber(Integer.parseInt(SphoneNumber));
-                    Person.setPassword(password);
-                    Person.setEmail(email);
-                    Registration.add(Person);
-                    JOptionPane.showMessageDialog(this, "you have successfully registered");
-//                    LoginForm Login2 = new LoginForm();
-//                    Login2.setVisible(true);
-//                    this.dispose();
-                    navigateToLogin();
-                }
-                else{
-                    JOptionPane.showMessageDialog(this, "this user is already registered");
-                }
-            }else{
-                 
-                JOptionPane.showMessageDialog(this, "the password confirmation is incorrect");
-                return;
-           }
+        if(emailValue.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Email is required");
+            return;
         }
         
+        if(password.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Password is required");
+            return;
+        }
+        
+        if(!confirmpassword.equals(password)){
+            JOptionPane.showMessageDialog(this, "Password does not match");
+            return;
+        }
+        
+        String idUser = UUID.randomUUID().toString();
+        
+        
+        UserModel user = new User(idUser, fullname, phonenumber, emailValue, password,"student");
+        
+        Fullname.setText("");
+        PhoneNumber.setText("");
+        Email.setText("");
+        Password.setText("");
+        ConPassword.setText("");
+        
+        userStorage.saveUser(user);
+        
+        JOptionPane.showMessageDialog(this, "User has been registered successfully");
+        
+        
+        navigateToLogin();
        
     }//GEN-LAST:event_BotRegisterActionPerformed
 

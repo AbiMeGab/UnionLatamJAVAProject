@@ -5,6 +5,8 @@
 package Clases;
 
 import java.awt.Color;
+import java.util.Arrays;
+
 import Clases.Registration;
 import Clases.User;
 import javax.swing.JOptionPane;
@@ -18,10 +20,15 @@ public class LoginForm extends javax.swing.JFrame {
     
     private Registration UseRecord;
     private RegistrationForm registrationFormView;
+    private UserStorage userStorage;
 
 
     public void setRegistrationFormView(RegistrationForm registrationFormView) {
         this.registrationFormView = registrationFormView;
+    }
+    
+    public void setUserStorage(UserStorage userStorage) {
+        this.userStorage = userStorage;
     }
 
     /**
@@ -220,20 +227,35 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void LogSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogSignActionPerformed
         
-        String Email = LogEmail.getText();
-        String Password = LogPassword.getText();
+        String email = LogEmail.getText();
+        String password = String.valueOf(LogPassword.getPassword());
         
-        int ind = User.verifyLogin(Email, Password);
+//        UserModel userS.getUserByEmail()
+        UserModel userFound = userStorage.getUserByEmail(email);
         
-        if (ind == -1 ){
+        if(userFound == null){
             JOptionPane.showMessageDialog(this, "Incorrect email or password");
+            return;
         }
-        else{
-            JOptionPane.showMessageDialog(this, "Iniciar session");
-            CoursesForm Courses = new CoursesForm();
-            Courses.setVisible(true);
-            this.dispose();
+        
+        if(!userFound.getPassword().equals(password)){
+            JOptionPane.showMessageDialog(this, "Incorrect email or password");
+            return;
         }
+        
+        JOptionPane.showMessageDialog(this,"User Logged in");
+        
+//        int ind = User.verifyLogin(Email, Password);
+//        
+//        if (ind == -1 ){
+//            JOptionPane.showMessageDialog(this, "Incorrect email or password");
+//        }
+//        else{
+//            JOptionPane.showMessageDialog(this, "Iniciar session");
+//            CoursesForm Courses = new CoursesForm();
+//            Courses.setVisible(true);
+//            this.dispose();
+//        }
    
         
     }//GEN-LAST:event_LogSignActionPerformed
