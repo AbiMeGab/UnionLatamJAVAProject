@@ -244,6 +244,10 @@ public class LoginForm extends javax.swing.JFrame {
         }
         
         JOptionPane.showMessageDialog(this,"User Logged in");
+        CoursesForm Courses = new CoursesForm();
+        Courses.setVisible(true);
+        this.dispose();
+        
         
 //        int ind = User.verifyLogin(Email, Password);
 //        
