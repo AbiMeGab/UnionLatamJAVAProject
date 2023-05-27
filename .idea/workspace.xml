@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="50ace843-ad23-4cab-a82b-1e8c7f989303" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/ClassMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/ClassMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/CoursesForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/CoursesForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/LoginForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/LoginForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/LoginForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/LoginForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/LoginForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/Registration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/RegistrationForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/RegistrationForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/RegistrationForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/RegistrationForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/RegistrationForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/RegistrationForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/UserStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/UserStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unionlatam/Clases/UserStorageMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unionlatam/Clases/UserStorageMock.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QLBXdK87PPSMnjQUTAAVXxWROQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="50ace843-ad23-4cab-a82b-1e8c7f989303" name="Changes" comment="" />
+      <created>1685123024352</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685123024352</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
