@@ -23,6 +23,10 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         int formheight = (int) (screenheight *1);
         this.setLocationRelativeTo(this);
         this.setSize(formwidth, formheight);
+        jTextArea1.setBackground(new Color(0, 0, 0, 0));
+        jTextArea3.setOpaque(false);
+        jTextArea3.setBackground(new Color(0, 0, 0, 0));
+        
        // jLabel1.setForeground(Color.white);
     }
 
@@ -47,13 +51,15 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jTextArea3 = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1440, 1024));
+        setPreferredSize(new java.awt.Dimension(1440, 1024));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(26, 26, 26));
@@ -118,137 +124,92 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jPanel2.setMinimumSize(new java.awt.Dimension(1440, 636));
         jPanel2.setName(""); // NOI18N
         jPanel2.setPreferredSize(new java.awt.Dimension(1440, 636));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/JavaBasic.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/java.png"))); // NOI18N
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 53, -1, -1));
 
         jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(214, 217, 223));
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("Unlock the power of JavaScript with our life-changing \ncourse, 'Java from basic to intermediate'! \n");
+        jTextArea1.setText("Unlock the power of Java with our life-changing\ncourse, 'Java From Basic to intermediate'!\n\nDive into the world of web development and master the\nlanguage that powers the internet.\n\nBuild interactive and dynamic web applications with ease.\n\nGain the confidence to create stunning user interfaces\nand enhance user experiences.\n\nDon't miss this opportunity to become a proficient Java From Basic \nto intermediate! ");
+        jTextArea1.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                jTextArea1CaretUpdate(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTextArea1);
 
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 938, 310));
+
         jTextArea3.setEditable(false);
-        jTextArea3.setBackground(new java.awt.Color(214, 217, 223));
+        jTextArea3.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         jTextArea3.setRows(5);
-        jTextArea3.setText("                Key themes for the course:\n\n");
+        jTextArea3.setText("                Key themes for the course:\n1. Explore the world of web development.\n2. Master Java, the language behind the internet.\n3. Build interactive and dynamic web applications.\n4. Create stunning user interfaces.\n5. Enhance user experiences through Java.");
         jScrollPane3.setViewportView(jTextArea3);
+
+        jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 374, 753, 158));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ButtonBuy.png"))); // NOI18N
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1012, 401, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ButtonBackToCourses.png"))); // NOI18N
-
-        jLabel6.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
-        jLabel6.setText("JavaScript Essential");
-        jLabel6.setMaximumSize(new java.awt.Dimension(287, 32));
-        jLabel6.setMinimumSize(new java.awt.Dimension(287, 32));
-        jLabel6.setPreferredSize(new java.awt.Dimension(287, 32));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1004, 547, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         jLabel9.setText("$50 USD");
         jLabel9.setMaximumSize(new java.awt.Dimension(287, 32));
         jLabel9.setMinimumSize(new java.awt.Dimension(287, 32));
         jLabel9.setPreferredSize(new java.awt.Dimension(287, 32));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 585, 87, 41));
 
         jLabel10.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
         jLabel10.setText("Professor: Dennis del Castillo");
         jLabel10.setMaximumSize(new java.awt.Dimension(287, 32));
         jLabel10.setMinimumSize(new java.awt.Dimension(287, 32));
         jLabel10.setPreferredSize(new java.awt.Dimension(287, 32));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 547, 437, -1));
 
         jLabel11.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
         jLabel11.setText("Duration: 24 hours");
         jLabel11.setMaximumSize(new java.awt.Dimension(287, 32));
         jLabel11.setMinimumSize(new java.awt.Dimension(287, 32));
         jLabel11.setPreferredSize(new java.awt.Dimension(287, 32));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 547, -1, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(250, 250, 250))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(240, 240, 240))))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(489, 489, 489)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jLabel3)
-                        .addGap(50, 50, 50)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 938, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(77, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(501, 501, 501)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(15, 15, 15)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5)
-                        .addGap(71, 71, 71)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, 0)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
+        jLabel12.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
+        jLabel12.setText("Java From Basic to intermediate");
+        jLabel12.setMaximumSize(new java.awt.Dimension(287, 32));
+        jLabel12.setMinimumSize(new java.awt.Dimension(287, 32));
+        jLabel12.setPreferredSize(new java.awt.Dimension(287, 32));
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 6, 542, -1));
+
+        jLabel6.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Yellow.png"))); // NOI18N
+        jLabel6.setMaximumSize(new java.awt.Dimension(287, 32));
+        jLabel6.setMinimumSize(new java.awt.Dimension(287, 32));
+        jLabel6.setPreferredSize(new java.awt.Dimension(287, 32));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 640));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1456, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -257,6 +218,10 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
 
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jTextArea1CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextArea1CaretUpdate
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextArea1CaretUpdate
 
     /**
      * @param args the command line arguments
@@ -300,6 +265,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
