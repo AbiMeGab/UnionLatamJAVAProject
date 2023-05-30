@@ -10,7 +10,11 @@ import java.util.UUID;
 
 import Clases.Registration;
 import Clases.User;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -21,6 +25,7 @@ public class RegistrationForm extends javax.swing.JFrame {
        private Registration record;
        private LoginForm loginFormView;
        private UserStorage userStorage;
+       FondoPanel2 Fondo = new FondoPanel2();
 
 
     public void setLoginFormView(LoginForm loginFormView) {
@@ -36,7 +41,7 @@ public class RegistrationForm extends javax.swing.JFrame {
      */
     public RegistrationForm() {
         
-        
+        this.setContentPane(Fondo);
         initComponents();
         int screenHeight = this.getHeight(); // Obtiene el alto de la pantalla
     int screenWidth = this.getWidth(); // Obtiene el ancho de la pantalla
@@ -63,7 +68,7 @@ public class RegistrationForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1 = new FondoPanel2();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -299,7 +304,23 @@ public class RegistrationForm extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-   
+   class FondoPanel2 extends JPanel
+   {
+        private Image imagen;
+       
+       @Override
+       public void paint(Graphics g)
+       {
+           imagen = new ImageIcon(getClass().getResource("/Imagenes/Fondo3.png")).getImage();
+           
+           g.drawImage(imagen,0,0,getWidth(),getHeight(), this);
+           
+           setOpaque(false);
+               
+           
+           super.paint(g);
+       }
+   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotRegister;
