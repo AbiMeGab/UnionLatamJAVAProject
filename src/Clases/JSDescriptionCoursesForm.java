@@ -4,7 +4,7 @@
  */
 package Clases;
 
-import java.awt.Color;
+import javax.swing.JOptionPane;//Para hacer un label como Button
 
 /**
  *
@@ -23,14 +23,79 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         int formheight = (int) (screenheight *1);
         this.setLocationRelativeTo(this);
         this.setSize(formwidth, formheight);
-        jTextArea1.setOpaque(false);
-        jTextArea1.setBackground(new Color(0, 0, 0, 0));
-        jTextArea3.setOpaque(false);
-        jTextArea3.setBackground(new Color(0, 0, 0, 0));
+        //Button buy, start
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        //Button buy, end
+        //Button back start
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        //Button back, end
+        //Account, start
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        //Account, end
+        //UnionLatam, start
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        //UnionLatam, end
         
-       // jLabel1.setForeground(Color.white);
-       
     }
+    
+    //Button buy, start
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
+    String clientName = JOptionPane.showInputDialog(this, "Client Name:");
+    String course = "JavaScript Essentials";
+    String professor = "Jack Lee";
+    double price = 12.0;
+    String purchaseOrderNumber = "ABC123";
+
+    String ticket = "Ticket de compra:\n"
+            + "Client Name: " + clientName + "\n"
+            + "Course: " + course + "\n"
+            + "Professor: " + professor + "\n"
+            + "Price: $" + price + "\n"
+            + "Purchase Order Number: " + purchaseOrderNumber;
+
+    JOptionPane.showMessageDialog(this, ticket);
+    }
+    //Button buy, end
+    //Button back, start
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {
+    JOptionPane.showMessageDialog(this, "¡Regresa a la anterior ventana!");
+    }
+    //Button back, end
+    //Account, start
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {
+    JOptionPane.showMessageDialog(this, "¡Vamos a la ventana Account!");
+    }
+    //Account, end
+    //UnionLatam, start
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {
+    JOptionPane.showMessageDialog(this, "¡Vamos a la ventana de cursos!");
+    }
+    //UnionLatam, end
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -57,6 +122,8 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
         jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,11 +146,6 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel8.setMaximumSize(new java.awt.Dimension(1024, 140));
         jLabel8.setMinimumSize(new java.awt.Dimension(1024, 140));
         jLabel8.setPreferredSize(new java.awt.Dimension(1024, 140));
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Courier New", 1, 110)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,7 +183,7 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
         );
 
         jPanel2.setMaximumSize(new java.awt.Dimension(1440, 636));
@@ -134,6 +196,7 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 53, -1, -1));
 
         jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 203));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         jTextArea1.setRows(5);
@@ -143,7 +206,7 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 53, 938, 306));
 
         jTextArea3.setEditable(false);
-        jTextArea3.setBackground(new java.awt.Color(255, 255, 255));
+        jTextArea3.setBackground(new java.awt.Color(255, 255, 204));
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         jTextArea3.setRows(5);
@@ -187,6 +250,16 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel14.setPreferredSize(new java.awt.Dimension(287, 32));
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 585, 87, 41));
 
+        jTextArea2.setEditable(false);
+        jTextArea2.setBackground(new java.awt.Color(255, 255, 203));
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        jTextArea2.setRows(5);
+        jTextArea2.setText("Unlock the power of JavaScript with our life-changing \ncourse, 'Javascript Essentials'! \n\nDive into the world of web development and master the \nlanguage that powers the internet. \n\nBuild interactive and dynamic web applications with ease. \n\nGain the confidence to create stunning user interfaces \nand enhance user experiences. \n\nDon't miss this opportunity to become a proficient JavaScript \ndeveloper!");
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 53, 938, 306));
+
         jLabel13.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Yellow.png"))); // NOI18N
         jLabel13.setMaximumSize(new java.awt.Dimension(287, 32));
@@ -198,27 +271,19 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1508, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-
-    }//GEN-LAST:event_jLabel8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -255,7 +320,6 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -271,8 +335,10 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,8 +4,7 @@
  */
 package Clases;
 
-import java.awt.Color;
-
+import javax.swing.JOptionPane;//PAra hacer un label como Button
 /**
  *
  * @author luis3
@@ -23,12 +22,78 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         int formheight = (int) (screenheight *1);
         this.setLocationRelativeTo(this);
         this.setSize(formwidth, formheight);
-        jTextArea1.setBackground(new Color(0, 0, 0, 0));
-        jTextArea3.setOpaque(false);
-        jTextArea3.setBackground(new Color(0, 0, 0, 0));
+        //Button buy, start
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        //Button buy, end
+        //Button back start
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        //Button back, end
+        //Account, start
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        //Account, end
+        //UnionLatam, start
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        //UnionLatam, end
         
-       // jLabel1.setForeground(Color.white);
     }
+    
+    //Button buy, start
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
+    String clientName = JOptionPane.showInputDialog(this, "Client Name:");
+    String course = "Java Basic";
+    String professor = "Dennis del Castillo";
+    double price = 50.0;
+    String purchaseOrderNumber = "ABC123";
+
+    String ticket = "Ticket de compra:\n"
+            + "Client Name: " + clientName + "\n"
+            + "Course: " + course + "\n"
+            + "Professor: " + professor + "\n"
+            + "Price: $" + price + "\n"
+            + "Purchase Order Number: " + purchaseOrderNumber;
+
+    JOptionPane.showMessageDialog(this, ticket);
+    }
+    //Button buy, end
+    //Button back, start
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {
+    JOptionPane.showMessageDialog(this, "¡Regresa a la anterior ventana!");
+    }
+    //Button back, end
+    //Account, start
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {
+    JOptionPane.showMessageDialog(this, "¡Vamos a la ventana Account!");
+    }
+    //Account, end
+    //UnionLatam, start
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {
+    JOptionPane.showMessageDialog(this, "¡Vamos a la ventana de cursos!");
+    }
+    //UnionLatam, end
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -58,6 +123,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1440, 1024));
         setMinimumSize(new java.awt.Dimension(1440, 1024));
         setPreferredSize(new java.awt.Dimension(1440, 1024));
         setResizable(false);
@@ -75,11 +141,6 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel8.setMaximumSize(new java.awt.Dimension(1024, 140));
         jLabel8.setMinimumSize(new java.awt.Dimension(1024, 140));
         jLabel8.setPreferredSize(new java.awt.Dimension(1024, 140));
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Courier New", 1, 110)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,7 +178,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
         );
 
         jPanel2.setMaximumSize(new java.awt.Dimension(1440, 636));
@@ -130,7 +191,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 53, -1, -1));
 
         jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 204));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         jTextArea1.setRows(5);
@@ -145,7 +206,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 938, 310));
 
         jTextArea3.setEditable(false);
-        jTextArea3.setBackground(new java.awt.Color(255, 255, 255));
+        jTextArea3.setBackground(new java.awt.Color(255, 255, 204));
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         jTextArea3.setRows(5);
@@ -173,7 +234,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel10.setMaximumSize(new java.awt.Dimension(287, 32));
         jLabel10.setMinimumSize(new java.awt.Dimension(287, 32));
         jLabel10.setPreferredSize(new java.awt.Dimension(287, 32));
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 547, 437, -1));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 550, 437, -1));
 
         jLabel11.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
         jLabel11.setText("Duration: 24 hours");
@@ -194,7 +255,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel6.setMaximumSize(new java.awt.Dimension(287, 32));
         jLabel6.setMinimumSize(new java.awt.Dimension(287, 32));
         jLabel6.setPreferredSize(new java.awt.Dimension(287, 32));
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 640));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 700));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -208,16 +269,12 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-
-    }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jTextArea1CaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextArea1CaretUpdate
         // TODO add your handling code here:
