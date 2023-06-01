@@ -1,5 +1,6 @@
 package Clases;
-import javax.swing.JOptionPane;//Para hacer un label como Button
+
+import javax.swing.*;
 
 public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
     
