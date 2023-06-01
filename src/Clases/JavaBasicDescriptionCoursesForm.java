@@ -105,9 +105,8 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1440, 1024));
-        setMinimumSize(new java.awt.Dimension(1440, 1024));
-        setPreferredSize(new java.awt.Dimension(1440, 1024));
+        setMaximumSize(new java.awt.Dimension(1440, 790));
+        setMinimumSize(new java.awt.Dimension(1440, 790));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(26, 26, 26));
@@ -177,7 +176,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("Unlock the power of Java with our life-changing\ncourse, 'Java From Basic to intermediate'!\n\nDive into the world of web development and master the\nlanguage that powers the internet.\n\nBuild interactive and dynamic web applications with ease.\n\nGain the confidence to create stunning user interfaces\nand enhance user experiences.\n\nDon't miss this opportunity to become a proficient Java From Basic \nto intermediate! ");
+        jTextArea1.setText("Unleash your creative genius with our JavaScript Essentials course guided by \nProfessor Jack Lee. With over 10 years of industry experience and a Ph.D. in \nComputer Science, Professor Lee will immerse you in captivating challenges and \npractical projects, mastering variables, functions, DOM manipulation, and more.\n \nBenefit from his expertise in developing cutting-edge web applications, stay ahead \nwith the latest trends, and receive constant support from Professor Lee and a \nvibrant learning community. Level up your web development skills and unlock a \nfuture of limitless opportunities. Join now!");
         jTextArea1.addCaretListener(new javax.swing.event.CaretListener() {
             public void caretUpdate(javax.swing.event.CaretEvent evt) {
                 jTextArea1CaretUpdate(evt);
@@ -237,7 +236,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel6.setMaximumSize(new java.awt.Dimension(287, 32));
         jLabel6.setMinimumSize(new java.awt.Dimension(287, 32));
         jLabel6.setPreferredSize(new java.awt.Dimension(287, 32));
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 700));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 650));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

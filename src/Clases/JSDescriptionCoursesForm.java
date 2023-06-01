@@ -107,9 +107,8 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(1440, 1024));
-        setMinimumSize(new java.awt.Dimension(1440, 1024));
-        setPreferredSize(new java.awt.Dimension(1440, 1024));
+        setMaximumSize(new java.awt.Dimension(1440, 790));
+        setMinimumSize(new java.awt.Dimension(1440, 790));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(26, 26, 26));
@@ -244,7 +243,7 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel13.setMaximumSize(new java.awt.Dimension(287, 32));
         jLabel13.setMinimumSize(new java.awt.Dimension(287, 32));
         jLabel13.setPreferredSize(new java.awt.Dimension(287, 32));
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 690));
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 650));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
