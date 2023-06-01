@@ -69,6 +69,7 @@ public class CoursesForm extends javax.swing.JFrame {
             GradientPaint gp = new GradientPaint(0,0,color6,180,height,color3);      
             g2d.setPaint(gp);
             g2d.fillRect(0,0,width,height);
+            
     
         }
    }
