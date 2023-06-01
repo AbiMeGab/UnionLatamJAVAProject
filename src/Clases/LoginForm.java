@@ -319,7 +319,7 @@ public class LoginForm extends javax.swing.JFrame {
     
     /*-----------------------clases-------------------------------*/
     
-    class FondoPanel2 extends JPanel
+    static class FondoPanel2 extends JPanel
    {
         private Image imagen;
        

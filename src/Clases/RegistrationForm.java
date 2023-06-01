@@ -25,7 +25,7 @@ public class RegistrationForm extends javax.swing.JFrame {
        private Registration record;
        private LoginForm loginFormView;
        private UserStorage userStorage;
-       FondoPanel2 Fondo = new FondoPanel2();
+       LoginForm.FondoPanel2 Fondo = new LoginForm.FondoPanel2();
 
 
     public void setLoginFormView(LoginForm loginFormView) {
@@ -68,7 +68,7 @@ public class RegistrationForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new FondoPanel2();
+        jPanel1 = new LoginForm.FondoPanel2();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -301,9 +301,6 @@ public class RegistrationForm extends javax.swing.JFrame {
         this.setVisible(false);
     }
 
-    /**
-     * @param args the command line arguments
-     */
    class BackgroundPane2 extends JPanel
    {
         private Image image;
