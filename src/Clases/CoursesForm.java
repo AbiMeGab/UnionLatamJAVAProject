@@ -24,7 +24,7 @@ public class CoursesForm extends javax.swing.JFrame {
     /**
      * Creates new form CoursesForm
      */
-    FondoPanel Fondo = new FondoPanel();
+    PanelBackground Background = new PanelBackground();
     public CoursesForm() {
         initComponents();
         int screenHeight = this.getHeight(); // Obtiene el alto de la pantalla
@@ -69,6 +69,7 @@ public class CoursesForm extends javax.swing.JFrame {
             GradientPaint gp = new GradientPaint(0,0,color6,180,height,color3);      
             g2d.setPaint(gp);
             g2d.fillRect(0,0,width,height);
+            
     
         }
    }
@@ -83,7 +84,7 @@ public class CoursesForm extends javax.swing.JFrame {
 
         CourForm = new FondoPanel2();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new FondoPanel();
+        jPanel2 = new PanelBackground();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -489,7 +490,7 @@ public class CoursesForm extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -561,7 +562,7 @@ public class CoursesForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 
-   class FondoPanel extends JPanel 
+   class PanelBackground extends JPanel
    {
        private Image imagen;
        
