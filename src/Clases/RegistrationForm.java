@@ -304,16 +304,16 @@ public class RegistrationForm extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-   class FondoPanel2 extends JPanel
+   class BackgroundPane2 extends JPanel
    {
-        private Image imagen;
+        private Image image;
        
        @Override
        public void paint(Graphics g)
        {
-           imagen = new ImageIcon(getClass().getResource("/Imagenes/Fondo3.png")).getImage();
+           image = new ImageIcon(getClass().getResource("/Imagenes/Fondo3.png")).getImage();
            
-           g.drawImage(imagen,0,0,getWidth(),getHeight(), this);
+           g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
            
            setOpaque(false);
                
@@ -341,5 +341,5 @@ public class RegistrationForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    // End of variables declaration//GEN-END:variables
+
 }
