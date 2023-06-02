@@ -6,8 +6,8 @@ public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
     
     private CoursesForm coursesForm;
     
-    public CoursesForm getCoursesForm() {
-        return coursesForm;
+    public void setCoursesForm(CoursesForm coursesForm) {
+        this.coursesForm = coursesForm;
     }
     
     public PythonEssentialsDescriptionCoursesForm() {
