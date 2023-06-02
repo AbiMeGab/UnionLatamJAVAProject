@@ -4,15 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-    /*public static void main(String[] args) {
-        System.out.println("Course ID: " + course.getId());
-        System.out.println("Course Name: " + course.getTitle());
-
-        CourseStorage courseStorage = new CourseStorage();
-        int folio = courseStorage.generateFolio();
-        courseStorage.assignCourseToFolio(course1, folio);
-    }*/
-
 class CourseStorage {
     private Map<String, Course> courseMap = new HashMap<>();
 
@@ -54,4 +45,4 @@ class CourseStorage {
         }
         return folio;
     }
-} /*Este código ya genera un ticket cada que se simula una compra, queda pendiente la conexión con la interfaz para relacionar a cada curso.*/
+}
