@@ -2,6 +2,12 @@ package Clases;
 import javax.swing.JOptionPane;//Para hacer un label como Button
 
 public class JSDescriptionCoursesForm extends javax.swing.JFrame {
+    
+    private CoursesForm coursesForm;
+    
+    public void setCoursesForm(CoursesForm coursesForm) {
+        this.coursesForm = coursesForm;
+    }
 
     public JSDescriptionCoursesForm() {
         initComponents();

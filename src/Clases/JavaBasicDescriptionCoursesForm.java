@@ -3,6 +3,13 @@ package Clases;
 import javax.swing.*;
 
 public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
+
+
+    private CoursesForm coursesForm;
+    
+    public void setCoursesForm(CoursesForm coursesForm) {
+        this.coursesForm = coursesForm;
+    }
     
     public JavaBasicDescriptionCoursesForm() {
         initComponents();

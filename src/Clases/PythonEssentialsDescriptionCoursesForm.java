@@ -3,6 +3,13 @@ import javax.swing.JOptionPane;//Para hacer un label como Button
 
 public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
 
+    
+    private CoursesForm coursesForm;
+    
+    public CoursesForm getCoursesForm() {
+        return coursesForm;
+    }
+    
     public PythonEssentialsDescriptionCoursesForm() {
         initComponents();
         int screenwidth = this.getWidth();
