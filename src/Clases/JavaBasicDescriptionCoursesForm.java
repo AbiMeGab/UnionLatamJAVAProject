@@ -28,6 +28,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
             }
         });
         //Button buy, end
+        
         //Button back start
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -37,6 +38,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
             }
         });
         //Button back, end
+        
         //Account, start
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -76,11 +78,16 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
     JOptionPane.showMessageDialog(this, ticket);
     }
     //Button buy, end
-    //Button back, start
+
+    /**
+     * @Method Button back to Courses form
+     * @param evt
+     */
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {
-    JOptionPane.showMessageDialog(this, "¡Regresa a la anterior ventana!");
+        this.coursesForm.setVisible(true);
+        this.setVisible(false);
     }
-    //Button back, end
+    
     //Account, start
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {
     JOptionPane.showMessageDialog(this, "¡Vamos a la ventana Account!");

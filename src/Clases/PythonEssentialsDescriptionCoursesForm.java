@@ -75,11 +75,15 @@ public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
     JOptionPane.showMessageDialog(this, ticket);
     }
     //Button buy, end
-    //Button back, start
+
+    /**
+     * @Method Button back to Courses form
+     * @param evt
+     */
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {
-    JOptionPane.showMessageDialog(this, "¡Regresa a la anterior ventana!");
+        this.coursesForm.setVisible(true);
+        this.setVisible(false);
     }
-    //Button back, end
     //Account, start
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {
     JOptionPane.showMessageDialog(this, "¡Vamos a la ventana Account!");
