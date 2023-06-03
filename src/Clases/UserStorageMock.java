@@ -18,7 +18,8 @@ public class UserStorageMock implements UserStorage {
     public Stack <UserModel> users = new Stack <UserModel>();
 
     public UserStorageMock() {
-
+        UserModel user = new User("1", "Admin", "123456789", "admin@admin.com","admin");
+        saveUser(user);
     }
 
     public void saveUser(UserModel user) {

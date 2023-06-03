@@ -27,6 +27,7 @@ public class LoginForm extends javax.swing.JFrame {
     private Registration UseRecord;
     private RegistrationForm registrationFormView;
     private UserStorage userStorage;
+    private CoursesForm coursesForm;
 
 
     public void setRegistrationFormView(RegistrationForm registrationFormView) {
@@ -35,6 +36,10 @@ public class LoginForm extends javax.swing.JFrame {
     
     public void setUserStorage(UserStorage userStorage) {
         this.userStorage = userStorage;
+    }
+    
+    public void setCoursesForm(CoursesForm coursesForm) {
+        this.coursesForm = coursesForm;
     }
 
     /**
@@ -282,9 +287,13 @@ public class LoginForm extends javax.swing.JFrame {
         }
         
         JOptionPane.showMessageDialog(this,"User Logged in");
-        CoursesForm Courses = new CoursesForm();
-        Courses.setVisible(true);
-        this.dispose();
+        
+        this.coursesForm.setVisible(true);
+        this.setVisible(false);
+        
+//        CoursesForm Courses = new CoursesForm();
+//        Courses.setVisible(true);
+//        this.dispose();
         
         
 //        int ind = User.verifyLogin(Email, Password);

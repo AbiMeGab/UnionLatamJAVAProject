@@ -20,6 +20,24 @@ import javax.swing.JPanel;
 public class CoursesForm extends javax.swing.JFrame {
     
     
+    private JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm;
+    private JSDescriptionCoursesForm jSDescriptionCoursesForm;
+    private PythonEssentialsDescriptionCoursesForm pythonEssentialsDescriptionCoursesForm;
+    
+    
+    public void setJavaBasicDescriptionCoursesForm(JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm) {
+        this.javaBasicDescriptionCoursesForm = javaBasicDescriptionCoursesForm;
+        System.out.println("javaBasicDescriptionCoursesForm: " + javaBasicDescriptionCoursesForm);
+    }
+
+    public void setJSDescriptionCoursesForm(JSDescriptionCoursesForm jSDescriptionCoursesForm) {
+        this.jSDescriptionCoursesForm = jSDescriptionCoursesForm;
+    }
+    
+    public void setPythonEssentialsDescriptionCoursesForm(PythonEssentialsDescriptionCoursesForm pythonDescriptionCoursesForm) {
+        this.pythonEssentialsDescriptionCoursesForm = pythonDescriptionCoursesForm;
+    }
+    
 
     /**
      * Creates new form CoursesForm
@@ -84,7 +102,7 @@ public class CoursesForm extends javax.swing.JFrame {
 
         CourForm = new FondoPanel2();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new PanelBackground();
+        jPanel2 = new FondoPanel2();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -365,6 +383,11 @@ public class CoursesForm extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
         jButton5.setText("BUY!");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jLabel23.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
         jLabel23.setText("$ 50 USD");
@@ -476,12 +499,19 @@ public class CoursesForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        this.pythonEssentialsDescriptionCoursesForm.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        this.jSDescriptionCoursesForm.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        this.javaBasicDescriptionCoursesForm.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
