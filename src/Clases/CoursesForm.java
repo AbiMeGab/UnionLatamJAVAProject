@@ -102,7 +102,8 @@ public class CoursesForm extends javax.swing.JFrame {
 
         CourForm = new FondoPanel2();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new FondoPanel2();
+        jPanel2 = new PanelBackground();
+        
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
