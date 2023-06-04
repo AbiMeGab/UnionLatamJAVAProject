@@ -52,6 +52,7 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
     String clientName = JOptionPane.showInputDialog(this, "Client Name:");
     String course = "JavaScript Essentials";
+    String duration = "12 hours";
     String professor = "Jack Lee";
     double price = 12.0;
     String purchaseOrderNumber = "ABC123";
@@ -59,6 +60,7 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
     String ticket = "Ticket de compra:\n"
             + "Client Name: " + clientName + "\n"
             + "Course: " + course + "\n"
+            + "Duration: " + duration + "\n"
             + "Professor: " + professor + "\n"
             + "Price: $" + price + "\n"
             + "Purchase Order Number: " + purchaseOrderNumber;
@@ -91,18 +93,15 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
         jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -173,25 +172,20 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/JS.png"))); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 53, -1, -1));
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(255, 255, 203));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Unlock the power of JavaScript with our life-changing \ncourse, 'Javascript Essentials'! \n\nDive into the world of web development and master the \nlanguage that powers the internet. \n\nBuild interactive and dynamic web applications with ease. \n\nGain the confidence to create stunning user interfaces \nand enhance user experiences. \n\nDon't miss this opportunity to become a proficient JavaScript \ndeveloper!");
-        jScrollPane1.setViewportView(jTextArea1);
+        jLabel12.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        jLabel12.setText("<html>Key themes for the course:<html>"
+        );
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 350, 40));
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 53, 938, 306));
+        jLabel9.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        jLabel9.setText("<html>1. Explore the world of web development.<p>2. Master JavaScript, the language behind the internet.<p>3. Build interactive and dynamic web applications.<p>4. Create stunning user interfaces.<p>5. Enhance user experiences through JavaScript.<html>"
+        );
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 640, 110));
 
-        jTextArea3.setEditable(false);
-        jTextArea3.setBackground(new java.awt.Color(255, 255, 204));
-        jTextArea3.setColumns(20);
-        jTextArea3.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
-        jTextArea3.setRows(5);
-        jTextArea3.setText("                Key themes for the course:\n1. Explore the world of web development.\n2. Master JavaScript, the language behind the internet.\n3. Build interactive and dynamic web applications.\n4. Create stunning user interfaces.\n5. Enhance user experiences through JavaScript.");
-        jScrollPane3.setViewportView(jTextArea3);
-
-        jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 374, 641, 158));
+        jLabel4.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        jLabel4.setText("<html>Unleash your creative genius with our JavaScript Essentials course guided by <p> Professor Jack Lee. With over 10 years of industry experience and a Ph.D. in<p> Computer Science, Professor Lee will immerse you in captivating challenges and<p> practical projects, mastering variables, functions, DOM manipulation, and more.<p><p> Benefit from his expertise in developing cutting-edge web applications, stay ahead<p> with the latest trends, and receive constant support from Professor Lee and a<p> vibrant learning community. Level up your web development skills and unlock a<p> future of limitless opportunities. Join now!<html>"
+        );
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 930, 180));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ButtonBuy.png"))); // NOI18N
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -227,16 +221,6 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         jLabel14.setMinimumSize(new java.awt.Dimension(287, 32));
         jLabel14.setPreferredSize(new java.awt.Dimension(287, 32));
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 585, 87, 41));
-
-        jTextArea2.setEditable(false);
-        jTextArea2.setBackground(new java.awt.Color(255, 255, 203));
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
-        jTextArea2.setRows(5);
-        jTextArea2.setText("Unlock the power of JavaScript with our life-changing \ncourse, 'Javascript Essentials'! \n\nDive into the world of web development and master the \nlanguage that powers the internet. \n\nBuild interactive and dynamic web applications with ease. \n\nGain the confidence to create stunning user interfaces \nand enhance user experiences. \n\nDon't miss this opportunity to become a proficient JavaScript \ndeveloper!");
-        jScrollPane2.setViewportView(jTextArea2);
-
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 53, 938, 306));
 
         jLabel13.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Yellow.png"))); // NOI18N
@@ -274,21 +258,18 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
     // End of variables declaration//GEN-END:variables
 }
