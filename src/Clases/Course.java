@@ -1,13 +1,17 @@
 package Clases;
 
+import java.util.UUID;
+
 public class Course {
+    private String id;
     private String title;
     private String description;
     private String professor;
     private int duration;
     private double price;
 
-    public Course(String title, String description, String professor, int duration, double price) {
+    public Course(String id, String title, String description, String professor, int duration, double price) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.professor = professor;
@@ -54,9 +58,12 @@ public class Course {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public String getId(){
+       UUID.randomUUID().toString();
+       return id;
+    }
+    public void setId(String id){
+        this.id = id;
+    }
 }
-/*
-Implementación
-        Course course = new Course("Introduction to Programming", "Learn the basics of programming", "John Doe", 10, 99.99);
-        course.setTitle("Programming Fundamentals");
-        course.setPrice(79.99);*/
