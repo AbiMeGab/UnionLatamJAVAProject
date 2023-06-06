@@ -16,6 +16,17 @@ import javax.swing.JPanel;
  */
 public class PaymentForm extends javax.swing.JFrame {
 
+    
+    private AppGlobalState appGlobalState;
+   private String courseName;
+   private  ActionPayment actionPayment;
+   
+   
+   public void setActionPayment(ActionPayment actionPayment) {
+        this.actionPayment = actionPayment;
+    }
+    
+    
     /**
      * Creates new form PaymentForm
      */
@@ -25,6 +36,16 @@ public class PaymentForm extends javax.swing.JFrame {
         jLabel13.setForeground(Color.WHITE);
         jLabel25.setForeground(Color.WHITE);
     }
+    
+    public PaymentForm(AppGlobalState appGlobalState, String courename){
+        this.appGlobalState = appGlobalState;
+        this.courseName = courename;
+        initComponents();
+        this.setLocationRelativeTo(this);
+        jLabel13.setForeground(Color.WHITE);
+        jLabel25.setForeground(Color.WHITE);
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -202,12 +223,12 @@ public class PaymentForm extends javax.swing.JFrame {
         jLabel20.setBackground(new java.awt.Color(153, 153, 153));
         jLabel20.setFont(new java.awt.Font("DialogInput", 0, 16)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel20.setText("JavaScript Essentials");
+        jLabel20.setText(courseName);
 
         jLabel21.setBackground(new java.awt.Color(153, 153, 153));
         jLabel21.setFont(new java.awt.Font("DialogInput", 0, 16)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel21.setText("Jane Doe");
+        jLabel21.setText(appGlobalState.getCurrentUser().getFullName());
 
         jLabel22.setBackground(new java.awt.Color(153, 153, 153));
         jLabel22.setFont(new java.awt.Font("DialogInput", 0, 16)); // NOI18N
@@ -387,7 +408,7 @@ public class PaymentForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        this.actionPayment.execute();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited

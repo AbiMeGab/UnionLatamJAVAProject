@@ -5,9 +5,14 @@ public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
 
     
     private CoursesForm coursesForm;
+    private AppGlobalState appGlobalState;
     
     public void setCoursesForm(CoursesForm coursesForm) {
         this.coursesForm = coursesForm;
+    }
+    
+    public void setAppGlobalState(AppGlobalState appGlobalState) {
+        this.appGlobalState = appGlobalState;
     }
     
     public PythonEssentialsDescriptionCoursesForm() {
@@ -57,22 +62,22 @@ public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
     }
     //Button buy, start
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
-    String clientName = JOptionPane.showInputDialog(this, "Client Name:");
-    String course = "Python Essentials";
-    String duration = "12 hours";
-    String professor = "Brian Higgins";
-    double price = 10.0;
-    String purchaseOrderNumber = "ABC123";
+        
+        if(appGlobalState.isUserLoggedIn()){
 
-    String ticket = "Ticket de compra:\n"
-            + "Client Name: " + clientName + "\n"
-            + "Course: " + course + "\n"
-            + "Duration: " + duration + "\n"
-            + "Professor: " + professor + "\n"
-            + "Price: $" + price + "\n"
-            + "Purchase Order Number: " + purchaseOrderNumber;
+            PaymentForm paymentForm = new PaymentForm(appGlobalState, "Python Essentials");
 
-    JOptionPane.showMessageDialog(this, ticket);
+            ActionPayment actionPayment = () -> {
+                this.setVisible(true);
+                paymentForm.dispose();
+            };
+
+            paymentForm.setActionPayment(actionPayment);
+            paymentForm.setVisible(true);
+            this.setVisible(false);
+        }
+
+
     }
     //Button buy, end
 
