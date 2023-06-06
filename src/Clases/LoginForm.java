@@ -28,6 +28,7 @@ public class LoginForm extends javax.swing.JFrame {
     private RegistrationForm registrationFormView;
     private UserStorage userStorage;
     private CoursesForm coursesForm;
+    private AppGlobalState appGlobalState;
 
 
     public void setRegistrationFormView(RegistrationForm registrationFormView) {
@@ -40,6 +41,10 @@ public class LoginForm extends javax.swing.JFrame {
     
     public void setCoursesForm(CoursesForm coursesForm) {
         this.coursesForm = coursesForm;
+    }
+    
+    public void setAppGlobalState(AppGlobalState appGlobalState) {
+        this.appGlobalState = appGlobalState;
     }
 
     /**
@@ -289,6 +294,7 @@ public class LoginForm extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this,"User Logged in");
         
         this.coursesForm.setVisible(true);
+        this.appGlobalState.setCurrentUser(userFound);
         this.setVisible(false);
         
 //        CoursesForm Courses = new CoursesForm();

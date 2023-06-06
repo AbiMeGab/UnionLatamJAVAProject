@@ -23,7 +23,6 @@ public class UserStorageMock implements UserStorage {
     }
 
     public void saveUser(UserModel user) {
-        System.out.println("User saved with id [ " + user.getId() + " ]");
         users.push(user);
     }
 

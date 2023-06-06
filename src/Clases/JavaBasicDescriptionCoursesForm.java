@@ -6,9 +6,14 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
 
 
     private CoursesForm coursesForm;
+    private  AppGlobalState appGlobalState;
     
     public void setCoursesForm(CoursesForm coursesForm) {
         this.coursesForm = coursesForm;
+    }
+    
+    public void setAppGlobalState(AppGlobalState appGlobalState) {
+        this.appGlobalState = appGlobalState;
     }
     
     public JavaBasicDescriptionCoursesForm() {
@@ -60,22 +65,21 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
     }
     //Button buy, start
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
-    String clientName = JOptionPane.showInputDialog(this, "Client Name:");
-    String course = "Java Basic";
-    String duration = "24 hours";
-    String professor = "Dennis del Castillo";
-    double price = 50.0;
-    String purchaseOrderNumber = "ABC123";
 
-    String ticket = "Ticket de compra:\n"
-            + "Client Name: " + clientName + "\n"
-            + "Course: " + course + "\n"
-            + "Duration: " + duration + "\n"
-            + "Professor: " + professor + "\n"
-            + "Price: $" + price + "\n"
-            + "Purchase Order Number: " + purchaseOrderNumber;
+        if(appGlobalState.isUserLoggedIn()){
 
-    JOptionPane.showMessageDialog(this, ticket);
+            PaymentForm paymentForm = new PaymentForm(appGlobalState, "Java Basic");
+
+            ActionPayment actionPayment = () -> {
+                this.setVisible(true);
+                paymentForm.dispose();
+            };
+
+            paymentForm.setActionPayment(actionPayment);
+            paymentForm.setVisible(true);
+            this.setVisible(false);
+        }
+        
     }
     //Button buy, end
 

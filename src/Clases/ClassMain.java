@@ -8,6 +8,7 @@ package Clases;
  * @author HP VICTUS
  */
 public class ClassMain {
+    final private static AppGlobalState appGlobalState = new AppGlobalState();
 
     final private static UserStorageMock userStorage = new UserStorageMock();
     final private static LoginForm loginFormView = new LoginForm();
@@ -41,6 +42,12 @@ public class ClassMain {
         loginFormView.setRegistrationFormView(registrationFormView);
         loginFormView.setUserStorage(userStorage);
         loginFormView.setCoursesForm(coursesForm);
+        loginFormView.setAppGlobalState(appGlobalState);
+        
+        
+        jSDescriptionCoursesForm.setAppGlobalState(appGlobalState);
+        javaBasicDescriptionCoursesForm.setAppGlobalState(appGlobalState);
+        pythonDescriptionCoursesForm.setAppGlobalState(appGlobalState);
 
         registrationFormView.setLoginFormView(loginFormView);
         registrationFormView.setUserStorage(userStorage);
@@ -52,5 +59,4 @@ public class ClassMain {
         pythonDescriptionCoursesForm.setVisible(false);
         loginFormView.setVisible(true);
     }
-
 }
