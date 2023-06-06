@@ -8,7 +8,6 @@ package Clases;
  * @author HP VICTUS
  */
 public class ClassMain {
-    
     final private static AppGlobalState appGlobalState = new AppGlobalState();
 
     final private static UserStorageMock userStorage = new UserStorageMock();
@@ -60,5 +59,4 @@ public class ClassMain {
         pythonDescriptionCoursesForm.setVisible(false);
         loginFormView.setVisible(true);
     }
-
 }

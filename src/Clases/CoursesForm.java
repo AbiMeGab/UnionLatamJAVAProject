@@ -27,7 +27,6 @@ public class CoursesForm extends javax.swing.JFrame {
     
     public void setJavaBasicDescriptionCoursesForm(JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm) {
         this.javaBasicDescriptionCoursesForm = javaBasicDescriptionCoursesForm;
-        System.out.println("javaBasicDescriptionCoursesForm: " + javaBasicDescriptionCoursesForm);
     }
 
     public void setJSDescriptionCoursesForm(JSDescriptionCoursesForm jSDescriptionCoursesForm) {
