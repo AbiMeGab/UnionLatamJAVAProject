@@ -22,23 +22,6 @@ public class CoursesForm extends javax.swing.JFrame {
     private AppGlobalViews appGlobalViews;
     private AppGlobalState appGlobalState;
     
-//    private JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm;
-//    private JSDescriptionCoursesForm jSDescriptionCoursesForm;
-//    private PythonEssentialsDescriptionCoursesForm pythonEssentialsDescriptionCoursesForm;
-//    
-//    
-//    public void setJavaBasicDescriptionCoursesForm(JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm) {
-//        this.javaBasicDescriptionCoursesForm = javaBasicDescriptionCoursesForm;
-//    }
-//
-//    public void setJSDescriptionCoursesForm(JSDescriptionCoursesForm jSDescriptionCoursesForm) {
-//        this.jSDescriptionCoursesForm = jSDescriptionCoursesForm;
-//    }
-//    
-//    public void setPythonEssentialsDescriptionCoursesForm(PythonEssentialsDescriptionCoursesForm pythonDescriptionCoursesForm) {
-//        this.pythonEssentialsDescriptionCoursesForm = pythonDescriptionCoursesForm;
-//    }
-    
 
     /**
      * Creates new form CoursesForm

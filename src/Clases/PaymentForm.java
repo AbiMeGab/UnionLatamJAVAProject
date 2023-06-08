@@ -22,12 +22,6 @@ public class PaymentForm extends javax.swing.JFrame {
    private AppGlobalViews appGlobalViews;
    private String courseId;
    
-   
-//   public void setActionPayment(ActionPayment actionPayment) {
-//        this.actionPayment = actionPayment;
-//    }
-//    
-    
     /**
      * Creates new form PaymentForm
      */

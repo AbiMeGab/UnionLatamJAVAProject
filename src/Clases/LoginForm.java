@@ -25,9 +25,6 @@ public class LoginForm extends javax.swing.JFrame {
     
     
     private Registration UseRecord;
-//    private RegistrationForm registrationFormView;
-//    private UserStorage userStorage;
-//    private CoursesForm coursesForm;
     private AppGlobalState appGlobalState;
     private AppGlobalViews appGlobalViews;
 

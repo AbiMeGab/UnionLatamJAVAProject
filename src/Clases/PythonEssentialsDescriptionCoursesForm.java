@@ -105,26 +105,11 @@ public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
     
     //Button buy, start
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
-        
         if(appGlobalState.isUserLoggedIn()){
-
             PaymentForm paymentForm = new PaymentForm(appGlobalViews,appGlobalState, "JavaScript Essentials",courseId);
             paymentForm.setVisible(true);
             this.setVisible(false);
-            
-//            PaymentForm paymentForm = new PaymentForm(appGlobalState, "Python Essentials");
-//
-//            ActionPayment actionPayment = () -> {
-//                this.setVisible(true);
-//                paymentForm.dispose();
-//            };
-//
-//            paymentForm.setActionPayment(actionPayment);
-//            paymentForm.setVisible(true);
-//            this.setVisible(false);
-        }
-
-
+       }
     }
     //Button buy, end
 

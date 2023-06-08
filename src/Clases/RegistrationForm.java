@@ -23,22 +23,11 @@ import javax.swing.JPanel;
 public class RegistrationForm extends javax.swing.JFrame {
     
        private Registration record;
-//       private LoginForm loginFormView;
-//       private UserStorage userStorage;
        
        private AppGlobalState appGlobalState;
          private AppGlobalViews appGlobalViews;
        
        LoginForm.FondoPanel2 Fondo = new LoginForm.FondoPanel2();
-
-
-//    public void setLoginFormView(LoginForm loginFormView) {
-//        this.loginFormView = loginFormView;
-//    }
-    
-//    public void setUserStorage(UserStorage userStorage) {
-//        this.userStorage = userStorage;
-//    }
 
     /**
      * Creates new form Registro
