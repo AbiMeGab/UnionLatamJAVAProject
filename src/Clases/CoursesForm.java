@@ -20,22 +20,25 @@ import javax.swing.JPanel;
 public class CoursesForm extends javax.swing.JFrame {
     
     
-    private JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm;
-    private JSDescriptionCoursesForm jSDescriptionCoursesForm;
-    private PythonEssentialsDescriptionCoursesForm pythonEssentialsDescriptionCoursesForm;
+    private AppGlobalViews appGlobalViews;
+    private AppGlobalState appGlobalState;
     
-    
-    public void setJavaBasicDescriptionCoursesForm(JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm) {
-        this.javaBasicDescriptionCoursesForm = javaBasicDescriptionCoursesForm;
-    }
-
-    public void setJSDescriptionCoursesForm(JSDescriptionCoursesForm jSDescriptionCoursesForm) {
-        this.jSDescriptionCoursesForm = jSDescriptionCoursesForm;
-    }
-    
-    public void setPythonEssentialsDescriptionCoursesForm(PythonEssentialsDescriptionCoursesForm pythonDescriptionCoursesForm) {
-        this.pythonEssentialsDescriptionCoursesForm = pythonDescriptionCoursesForm;
-    }
+//    private JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm;
+//    private JSDescriptionCoursesForm jSDescriptionCoursesForm;
+//    private PythonEssentialsDescriptionCoursesForm pythonEssentialsDescriptionCoursesForm;
+//    
+//    
+//    public void setJavaBasicDescriptionCoursesForm(JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm) {
+//        this.javaBasicDescriptionCoursesForm = javaBasicDescriptionCoursesForm;
+//    }
+//
+//    public void setJSDescriptionCoursesForm(JSDescriptionCoursesForm jSDescriptionCoursesForm) {
+//        this.jSDescriptionCoursesForm = jSDescriptionCoursesForm;
+//    }
+//    
+//    public void setPythonEssentialsDescriptionCoursesForm(PythonEssentialsDescriptionCoursesForm pythonDescriptionCoursesForm) {
+//        this.pythonEssentialsDescriptionCoursesForm = pythonDescriptionCoursesForm;
+//    }
     
 
     /**
@@ -65,7 +68,20 @@ public class CoursesForm extends javax.swing.JFrame {
  
        // CourPanel.setSize(formWidth, formHeight);  
     }
-    
+
+    public CoursesForm(AppGlobalViews appGlobalViews,AppGlobalState appGlobalState) {
+        this.appGlobalViews = appGlobalViews;
+        this.appGlobalState = appGlobalState;
+        initComponents();
+        int screenHeight = this.getHeight();
+        int screenWidth = this.getWidth(); 
+        int formWidth =  (int) (screenWidth * 1);
+        int formHeight = (int) (screenHeight * 0.9);
+        this.setSize(formWidth, formHeight);
+        this.setLocationRelativeTo(this);
+        jLabel1.setForeground(Color.WHITE);
+        jLabel3.setForeground(Color.WHITE);
+    }
     
    public String StrToHtml(String tex) {
        return "<html><p>" + tex + "</p></html>";
@@ -499,17 +515,19 @@ public class CoursesForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        this.pythonEssentialsDescriptionCoursesForm.setVisible(true);
+//        this.pythonEssentialsDescriptionCoursesForm.setVisible(true);
+        this.appGlobalViews.getPythonDescriptionCoursesForm().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.jSDescriptionCoursesForm.setVisible(true);
+        this.appGlobalViews.getjSDescriptionCoursesForm().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        this.javaBasicDescriptionCoursesForm.setVisible(true);
+//        this.javaBasicDescriptionCoursesForm.setVisible(true);
+        this.appGlobalViews.getJavaBasicDescriptionCoursesForm().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
 
