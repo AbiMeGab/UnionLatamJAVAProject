@@ -111,7 +111,7 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
     
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
         if(appGlobalState.isUserLoggedIn()){
-            PaymentForm paymentForm = new PaymentForm(appGlobalViews,appGlobalState, "JavaScript Essentials",courseId);
+            PaymentForm paymentForm = new PaymentForm(appGlobalViews,appGlobalState, "Java From Basic to intermediate",courseId,"50USD","Dennis del Castillo");
             paymentForm.setVisible(true);
             this.setVisible(false);
         }
