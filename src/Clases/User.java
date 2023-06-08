@@ -9,19 +9,6 @@ public class User implements UserModel {
     String email = "";
     String password = "";
 
-
-    public User(String id, String fullName, String phoneNumber, String email, String password) {
-        this.id = id;
-        this.fullName = fullName;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.password = password;
-    }
-
-    public User() {
-
-    }
-
     public User(String id, String fullName, String phoneNumber, String email, String password, String role) {
         this.id = id;
         this.fullName = fullName;
@@ -78,6 +65,12 @@ public class User implements UserModel {
     public void setRole(String role){
         this.role = role;
     }
+    
+    public String getCourseById(){
+        return "";
+    }
+    
+    
 
     public boolean comparePassword(String password) {
         return this.password.equals(password);

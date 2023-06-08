@@ -1,5 +1,7 @@
 package Clases;
 
+import java.util.Stack;
+
 public interface UserModel {
     String id = "";
     String fullName = "";
@@ -7,6 +9,7 @@ public interface UserModel {
     String email = "";
     String password = "";
     String role = "";
+    Stack<String> courses= null;
 
     String getId();
 
@@ -33,5 +36,12 @@ public interface UserModel {
     void setRole(String role);
 
     boolean comparePassword(String password);
+    
+    String getCourseById(String id);
+    
+    void addCourse(String id);
+    
+    
+    
 }
 
