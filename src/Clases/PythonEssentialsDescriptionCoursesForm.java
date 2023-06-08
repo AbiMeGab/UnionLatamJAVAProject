@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;//Para hacer un label como Button
 public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
 
     
+    final private String  courseId = "PY";
     private AppGlobalState appGlobalState;
     private AppGlobalViews appGlobalViews;
     
@@ -107,16 +108,20 @@ public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
         
         if(appGlobalState.isUserLoggedIn()){
 
-            PaymentForm paymentForm = new PaymentForm(appGlobalState, "Python Essentials");
-
-            ActionPayment actionPayment = () -> {
-                this.setVisible(true);
-                paymentForm.dispose();
-            };
-
-            paymentForm.setActionPayment(actionPayment);
+            PaymentForm paymentForm = new PaymentForm(appGlobalViews,appGlobalState, "JavaScript Essentials",courseId);
             paymentForm.setVisible(true);
             this.setVisible(false);
+            
+//            PaymentForm paymentForm = new PaymentForm(appGlobalState, "Python Essentials");
+//
+//            ActionPayment actionPayment = () -> {
+//                this.setVisible(true);
+//                paymentForm.dispose();
+//            };
+//
+//            paymentForm.setActionPayment(actionPayment);
+//            paymentForm.setVisible(true);
+//            this.setVisible(false);
         }
 
 

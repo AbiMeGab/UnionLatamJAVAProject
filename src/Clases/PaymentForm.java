@@ -19,13 +19,14 @@ public class PaymentForm extends javax.swing.JFrame {
     
     private AppGlobalState appGlobalState;
    private String courseName;
-   private  ActionPayment actionPayment;
+   private AppGlobalViews appGlobalViews;
+   private String courseId;
    
    
-   public void setActionPayment(ActionPayment actionPayment) {
-        this.actionPayment = actionPayment;
-    }
-    
+//   public void setActionPayment(ActionPayment actionPayment) {
+//        this.actionPayment = actionPayment;
+//    }
+//    
     
     /**
      * Creates new form PaymentForm
@@ -37,7 +38,9 @@ public class PaymentForm extends javax.swing.JFrame {
         jLabel25.setForeground(Color.WHITE);
     }
     
-    public PaymentForm(AppGlobalState appGlobalState, String courename){
+    public PaymentForm(AppGlobalViews appGlobalViews,AppGlobalState appGlobalState, String courename,String courseId){
+        this.courseId = courseId;
+       this.appGlobalViews = appGlobalViews; 
         this.appGlobalState = appGlobalState;
         this.courseName = courename;
         initComponents();
@@ -408,7 +411,12 @@ public class PaymentForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.actionPayment.execute();
+        this.appGlobalState.getCurrentUser().addCourse(this.courseId);
+        CoursesForm newCoursesForm = new CoursesForm(this.appGlobalViews,this.appGlobalState);
+        this.appGlobalViews.setCoursesForm(newCoursesForm);
+        this.appGlobalViews.getCoursesForm().setVisible(true);
+        this.dispose();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited

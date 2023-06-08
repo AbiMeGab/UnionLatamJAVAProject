@@ -10,8 +10,7 @@ import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 /**
  *
@@ -235,7 +234,7 @@ public class CoursesForm extends javax.swing.JFrame {
         jLabel12.setText("<html>Unleash your creativity with our JavaScript Essentials course. Dive into the world of web development and master the language that powers interactive websites. From variables to functions, learn the essential concepts and build real-life projects that will leave a lasting impression.<html>");
 
         jButton2.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jButton2.setText("BUY!");
+//        jButton2.setText("BUY!");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -243,7 +242,18 @@ public class CoursesForm extends javax.swing.JFrame {
         });
 
         jLabel21.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jLabel21.setText("$ 12 USD");
+//        jLabel21.setText("$ 12 USD");
+        
+        String courseJSId = "JS";
+        if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(courseJSId) != null){
+            jButton2.setText("START");
+            jLabel21.setText(" ");
+            jLabel21.setVisible(false);
+        }else {
+            jButton2.setText("BUY!");
+            jLabel21.setText("$ 12 USD");
+            jLabel21.setVisible(true);
+        }
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Estrella2.png"))); // NOI18N
 
@@ -319,7 +329,7 @@ public class CoursesForm extends javax.swing.JFrame {
         jLabel17.setText("<html>Unlock the potential of Python with our Python Essentials course.<p> Whether you're a beginner or an aspiring data scientist, this course will equip you with the foundational knowledge to write clean code, manipulate data, and automate tasks. Discover the limitless possibilities of Python today.<html>");
 
         jButton4.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jButton4.setText("BUY!");
+//        jButton4.setText("BUY!");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -327,7 +337,17 @@ public class CoursesForm extends javax.swing.JFrame {
         });
 
         jLabel22.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jLabel22.setText("$ 10 USD");
+//        jLabel22.setText("$ 10 USD");
+        
+        String coursePYId = "PY";
+        if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(coursePYId) != null){
+            jButton4.setText("START");
+            jLabel22.setText(" ");
+            jLabel22.setVisible(false);
+        }else {
+            jButton4.setText("BUY!");
+            jLabel22.setText("$ 10 USD");
+        }
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Estrella2.png"))); // NOI18N
 
@@ -398,7 +418,6 @@ public class CoursesForm extends javax.swing.JFrame {
         jLabel20.setText("<html>Take your Java skills to the next level with our comprehensive Java course. From basic syntax to object-oriented programming, learn the building blocks of this versatile language. Gain hands-on experience by developing applications and unleash your potential in the world of software development.<html>");
 
         jButton5.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jButton5.setText("BUY!");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -406,7 +425,18 @@ public class CoursesForm extends javax.swing.JFrame {
         });
 
         jLabel23.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jLabel23.setText("$ 50 USD");
+        
+        String courseJavaId = "JAVA";
+        
+        if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(courseJavaId) != null) {
+            jButton5.setText("START");
+            jLabel23.setText(" ");
+            jLabel23.setVisible(false);
+        }else {
+            jButton5.setText("BUY!");
+            jLabel23.setText("$ 50 USD");
+        }
+        
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Estrella2.png"))); // NOI18N
 

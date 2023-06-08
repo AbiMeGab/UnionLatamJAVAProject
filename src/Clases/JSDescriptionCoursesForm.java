@@ -2,9 +2,11 @@ package Clases;
 import javax.swing.JOptionPane;//Para hacer un label como Button
 
 public class JSDescriptionCoursesForm extends javax.swing.JFrame {
-    
+
+    final private String courseId = "JS";
     private AppGlobalState appGlobalState;
     private AppGlobalViews appGlobalViews;
+    
     
     public JSDescriptionCoursesForm() {
         initComponents();
@@ -102,15 +104,7 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
     //Button buy, start
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
         if(appGlobalState.isUserLoggedIn()){
-
-            PaymentForm paymentForm = new PaymentForm(appGlobalState, "JavaScript Essentials");
-            
-            ActionPayment actionPayment = () -> {
-                this.setVisible(true);
-                paymentForm.dispose();
-            };
-            
-            paymentForm.setActionPayment(actionPayment);
+            PaymentForm paymentForm = new PaymentForm(appGlobalViews,appGlobalState, "JavaScript Essentials",courseId);
             paymentForm.setVisible(true);
             this.setVisible(false);
         }
