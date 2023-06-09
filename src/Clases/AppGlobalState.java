@@ -2,7 +2,8 @@ package Clases;
 
 public class AppGlobalState {
     
-    public UserModel currentUser;
+    private UserModel currentUser = null;
+    final private UserStorageMock userStorage = new UserStorageMock();
     
    public void setCurrentUser(UserModel currentUser) {
         this.currentUser = currentUser;
@@ -19,5 +20,10 @@ public class AppGlobalState {
     public void logout() {
         currentUser = null;
     }
+    
+    public UserStorageMock getUserStorage() {
+        return userStorage;
+    }
+    
 
 }

@@ -25,24 +25,10 @@ public class LoginForm extends javax.swing.JFrame {
     
     
     private Registration UseRecord;
-    private RegistrationForm registrationFormView;
-    private UserStorage userStorage;
-    private CoursesForm coursesForm;
     private AppGlobalState appGlobalState;
+    private AppGlobalViews appGlobalViews;
 
 
-    public void setRegistrationFormView(RegistrationForm registrationFormView) {
-        this.registrationFormView = registrationFormView;
-    }
-    
-    public void setUserStorage(UserStorage userStorage) {
-        this.userStorage = userStorage;
-    }
-    
-    public void setCoursesForm(CoursesForm coursesForm) {
-        this.coursesForm = coursesForm;
-    }
-    
     public void setAppGlobalState(AppGlobalState appGlobalState) {
         this.appGlobalState = appGlobalState;
     }
@@ -70,6 +56,23 @@ public class LoginForm extends javax.swing.JFrame {
   // UseRecord = new Registration();
    
 }
+
+    public LoginForm(AppGlobalViews appGlobalViews, AppGlobalState appGlobalState) {
+        this.appGlobalViews = appGlobalViews;
+        this.appGlobalState = appGlobalState;
+        initComponents();
+        int screenHeight = this.getHeight(); // Obtiene el alto de la pantalla
+        int screenWidth = this.getWidth(); // Obtiene el ancho de la pantalla
+        int formWidth = (int) (screenWidth * 0.82); // Calcula el ancho del formulario como el 80% del ancho de la pantalla
+        int formHeight = (int) (screenHeight * 0.8); // Calcula el alto del formulario como el 60% del alto de la pantalla
+        this.setSize(formWidth, formHeight); // Establece el tamaño del formulario
+        this.setLocationRelativeTo(this); // Centra el formulario en la pantalla
+        jLabel7.setForeground(Color.white);
+        jLabel5.setForeground(Color.white);
+        // UseRecord = new Registration();
+
+    }
+
     class jPanelGradient extends JPanel {
         protected void paintComponent(Graphics g){
             Graphics2D g2d = (Graphics2D) g;
@@ -279,7 +282,8 @@ public class LoginForm extends javax.swing.JFrame {
         String password = String.valueOf(LogPassword.getPassword());
         
 //        UserModel userS.getUserByEmail()
-        UserModel userFound = userStorage.getUserByEmail(email);
+//        UserModel userFound = userStorage.getUserByEmail(email);
+        UserModel userFound = this.appGlobalState.getUserStorage().getUserByEmail(email);
         
         if(userFound == null){
             JOptionPane.showMessageDialog(this, "Incorrect email or password");
@@ -293,7 +297,8 @@ public class LoginForm extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(this,"User Logged in");
         
-        this.coursesForm.setVisible(true);
+//        this.coursesForm.setVisible(true);
+        this.appGlobalViews.getCoursesForm().setVisible(true);
         this.appGlobalState.setCurrentUser(userFound);
         this.setVisible(false);
         
@@ -327,7 +332,8 @@ public class LoginForm extends javax.swing.JFrame {
      * 
      */
     private void navigateToRegistrationForm(){
-        this.registrationFormView.setVisible(true);
+//        this.registrationFormView.setVisible(true);
+        this.appGlobalViews.getRegistrationFormView().setVisible(true);
         this.setVisible(false);
     }
 

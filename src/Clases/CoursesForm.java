@@ -10,32 +10,21 @@ import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 /**
  *
  * @author HP VICTUS
  */
 public class CoursesForm extends javax.swing.JFrame {
-    
-    
-    private JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm;
-    private JSDescriptionCoursesForm jSDescriptionCoursesForm;
-    private PythonEssentialsDescriptionCoursesForm pythonEssentialsDescriptionCoursesForm;
-    
-    
-    public void setJavaBasicDescriptionCoursesForm(JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm) {
-        this.javaBasicDescriptionCoursesForm = javaBasicDescriptionCoursesForm;
-    }
 
-    public void setJSDescriptionCoursesForm(JSDescriptionCoursesForm jSDescriptionCoursesForm) {
-        this.jSDescriptionCoursesForm = jSDescriptionCoursesForm;
-    }
+    final private String courseJSId = "JS";
+    final private String courseJavaId = "JAVA";
+    final private String coursePYId = "PY";
     
-    public void setPythonEssentialsDescriptionCoursesForm(PythonEssentialsDescriptionCoursesForm pythonDescriptionCoursesForm) {
-        this.pythonEssentialsDescriptionCoursesForm = pythonDescriptionCoursesForm;
-    }
+    
+    private AppGlobalViews appGlobalViews;
+    private AppGlobalState appGlobalState;
     
 
     /**
@@ -65,7 +54,20 @@ public class CoursesForm extends javax.swing.JFrame {
  
        // CourPanel.setSize(formWidth, formHeight);  
     }
-    
+
+    public CoursesForm(AppGlobalViews appGlobalViews,AppGlobalState appGlobalState) {
+        this.appGlobalViews = appGlobalViews;
+        this.appGlobalState = appGlobalState;
+        initComponents();
+        int screenHeight = this.getHeight();
+        int screenWidth = this.getWidth(); 
+        int formWidth =  (int) (screenWidth * 1);
+        int formHeight = (int) (screenHeight * 0.9);
+        this.setSize(formWidth, formHeight);
+        this.setLocationRelativeTo(this);
+        jLabel1.setForeground(Color.WHITE);
+        jLabel3.setForeground(Color.WHITE);
+    }
     
    public String StrToHtml(String tex) {
        return "<html><p>" + tex + "</p></html>";
@@ -219,7 +221,6 @@ public class CoursesForm extends javax.swing.JFrame {
         jLabel12.setText("<html>Unleash your creativity with our JavaScript Essentials course. Dive into the world of web development and master the language that powers interactive websites. From variables to functions, learn the essential concepts and build real-life projects that will leave a lasting impression.<html>");
 
         jButton2.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jButton2.setText("BUY!");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -227,7 +228,16 @@ public class CoursesForm extends javax.swing.JFrame {
         });
 
         jLabel21.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jLabel21.setText("$ 12 USD");
+       
+        if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(courseJSId) != null){
+            jButton2.setText("START");
+            jLabel21.setText(" ");
+            jLabel21.setVisible(false);
+        }else {
+            jButton2.setText("BUY!");
+            jLabel21.setText("$ 12 USD");
+            jLabel21.setVisible(true);
+        }
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Estrella2.png"))); // NOI18N
 
@@ -303,7 +313,6 @@ public class CoursesForm extends javax.swing.JFrame {
         jLabel17.setText("<html>Unlock the potential of Python with our Python Essentials course.<p> Whether you're a beginner or an aspiring data scientist, this course will equip you with the foundational knowledge to write clean code, manipulate data, and automate tasks. Discover the limitless possibilities of Python today.<html>");
 
         jButton4.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jButton4.setText("BUY!");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -311,7 +320,15 @@ public class CoursesForm extends javax.swing.JFrame {
         });
 
         jLabel22.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jLabel22.setText("$ 10 USD");
+        
+        if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(coursePYId) != null){
+            jButton4.setText("START");
+            jLabel22.setText(" ");
+            jLabel22.setVisible(false);
+        }else {
+            jButton4.setText("BUY!");
+            jLabel22.setText("$ 10 USD");
+        }
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Estrella2.png"))); // NOI18N
 
@@ -382,7 +399,6 @@ public class CoursesForm extends javax.swing.JFrame {
         jLabel20.setText("<html>Take your Java skills to the next level with our comprehensive Java course. From basic syntax to object-oriented programming, learn the building blocks of this versatile language. Gain hands-on experience by developing applications and unleash your potential in the world of software development.<html>");
 
         jButton5.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jButton5.setText("BUY!");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -390,7 +406,17 @@ public class CoursesForm extends javax.swing.JFrame {
         });
 
         jLabel23.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
-        jLabel23.setText("$ 50 USD");
+        
+        
+        if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(courseJavaId) != null) {
+            jButton5.setText("START");
+            jLabel23.setText(" ");
+            jLabel23.setVisible(false);
+        }else {
+            jButton5.setText("BUY!");
+            jLabel23.setText("$ 50 USD");
+        }
+        
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Estrella2.png"))); // NOI18N
 
@@ -499,17 +525,29 @@ public class CoursesForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        this.pythonEssentialsDescriptionCoursesForm.setVisible(true);
+        if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(coursePYId) != null){
+            JOptionPane.showMessageDialog(this, "You have already enrolled in this course");  
+            return;
+        }
+        this.appGlobalViews.getPythonDescriptionCoursesForm().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.jSDescriptionCoursesForm.setVisible(true);
+        if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(courseJSId) != null){
+            JOptionPane.showMessageDialog(this, "You have already enrolled in this course");  
+            return;
+        }
+        this.appGlobalViews.getjSDescriptionCoursesForm().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        this.javaBasicDescriptionCoursesForm.setVisible(true);
+        if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(courseJavaId) != null){
+            JOptionPane.showMessageDialog(this, "You have already enrolled in this course");  
+            return;
+        }
+        this.appGlobalViews.getJavaBasicDescriptionCoursesForm().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
 

@@ -7,6 +7,7 @@ package Clases;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.util.UUID;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
@@ -19,14 +20,11 @@ public class PaymentForm extends javax.swing.JFrame {
     
     private AppGlobalState appGlobalState;
    private String courseName;
-   private  ActionPayment actionPayment;
+   private AppGlobalViews appGlobalViews;
+   private String courseId;
+   private String price;
+    private String professor;
    
-   
-   public void setActionPayment(ActionPayment actionPayment) {
-        this.actionPayment = actionPayment;
-    }
-    
-    
     /**
      * Creates new form PaymentForm
      */
@@ -37,9 +35,13 @@ public class PaymentForm extends javax.swing.JFrame {
         jLabel25.setForeground(Color.WHITE);
     }
     
-    public PaymentForm(AppGlobalState appGlobalState, String courename){
+    public PaymentForm(AppGlobalViews appGlobalViews,AppGlobalState appGlobalState, String courseName,String courseId, String price, String professor){
+        this.courseId = courseId;
+       this.appGlobalViews = appGlobalViews; 
         this.appGlobalState = appGlobalState;
-        this.courseName = courename;
+        this.courseName = courseName;
+        this.professor = professor;
+        this.price = price;
         initComponents();
         this.setLocationRelativeTo(this);
         jLabel13.setForeground(Color.WHITE);
@@ -233,17 +235,17 @@ public class PaymentForm extends javax.swing.JFrame {
         jLabel22.setBackground(new java.awt.Color(153, 153, 153));
         jLabel22.setFont(new java.awt.Font("DialogInput", 0, 16)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel22.setText("Jack Lee");
+        jLabel22.setText(this.professor);
 
         jLabel23.setBackground(new java.awt.Color(153, 153, 153));
         jLabel23.setFont(new java.awt.Font("DialogInput", 0, 16)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel23.setText("12 USD");
+        jLabel23.setText(this.price);
 
         jLabel24.setBackground(new java.awt.Color(153, 153, 153));
         jLabel24.setFont(new java.awt.Font("DialogInput", 0, 16)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel24.setText("#564523435");
+        jLabel24.setText("#" + UUID.randomUUID().toString().substring(0, 8));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -408,7 +410,12 @@ public class PaymentForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.actionPayment.execute();
+        this.appGlobalState.getCurrentUser().addCourse(this.courseId);
+        CoursesForm newCoursesForm = new CoursesForm(this.appGlobalViews,this.appGlobalState);
+        this.appGlobalViews.setCoursesForm(newCoursesForm);
+        this.appGlobalViews.getCoursesForm().setVisible(true);
+        this.dispose();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited

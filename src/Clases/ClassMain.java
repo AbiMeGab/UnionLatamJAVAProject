@@ -9,17 +9,8 @@ package Clases;
  */
 public class ClassMain {
     final private static AppGlobalState appGlobalState = new AppGlobalState();
-
-    final private static UserStorageMock userStorage = new UserStorageMock();
-    final private static LoginForm loginFormView = new LoginForm();
-    final private static RegistrationForm registrationFormView = new RegistrationForm();
+    final private static AppGlobalViews appGlobalViews = new AppGlobalViews();
     
-    final private static CoursesForm coursesForm = new CoursesForm();
-
-    final private static JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm = new JavaBasicDescriptionCoursesForm();
-    final private static JSDescriptionCoursesForm jSDescriptionCoursesForm = new JSDescriptionCoursesForm();
-    final private static PythonEssentialsDescriptionCoursesForm pythonDescriptionCoursesForm = new PythonEssentialsDescriptionCoursesForm();
-
     public static void main(String[] args) {
         try {
             launchApp();
@@ -30,33 +21,24 @@ public class ClassMain {
     }
 
     public static void launchApp() {
-
-        coursesForm.setJavaBasicDescriptionCoursesForm(javaBasicDescriptionCoursesForm);
-        coursesForm.setJSDescriptionCoursesForm(jSDescriptionCoursesForm);
-        coursesForm.setPythonEssentialsDescriptionCoursesForm(pythonDescriptionCoursesForm);
-
-        javaBasicDescriptionCoursesForm.setCoursesForm(coursesForm);
-        jSDescriptionCoursesForm.setCoursesForm(coursesForm);
-        pythonDescriptionCoursesForm.setCoursesForm(coursesForm);
+        JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm = new JavaBasicDescriptionCoursesForm(appGlobalViews,appGlobalState);
+        JSDescriptionCoursesForm jSDescriptionCoursesForm = new JSDescriptionCoursesForm(appGlobalViews,appGlobalState);
+        PythonEssentialsDescriptionCoursesForm pythonDescriptionCoursesForm = new PythonEssentialsDescriptionCoursesForm(appGlobalViews,appGlobalState);
         
-        loginFormView.setRegistrationFormView(registrationFormView);
-        loginFormView.setUserStorage(userStorage);
-        loginFormView.setCoursesForm(coursesForm);
-        loginFormView.setAppGlobalState(appGlobalState);
+        appGlobalViews.setJavaBasicDescriptionCoursesForm(javaBasicDescriptionCoursesForm);
+        appGlobalViews.setjSDescriptionCoursesForm(jSDescriptionCoursesForm);
+        appGlobalViews.setPythonDescriptionCoursesForm(pythonDescriptionCoursesForm);
         
         
-        jSDescriptionCoursesForm.setAppGlobalState(appGlobalState);
-        javaBasicDescriptionCoursesForm.setAppGlobalState(appGlobalState);
-        pythonDescriptionCoursesForm.setAppGlobalState(appGlobalState);
-
-        registrationFormView.setLoginFormView(loginFormView);
-        registrationFormView.setUserStorage(userStorage);
-
-        coursesForm.setVisible(false);
-        registrationFormView.setVisible(false);
-        javaBasicDescriptionCoursesForm.setVisible(false);
-        jSDescriptionCoursesForm.setVisible(false);
-        pythonDescriptionCoursesForm.setVisible(false);
-        loginFormView.setVisible(true);
+        CoursesForm coursesFormView = new CoursesForm(appGlobalViews,appGlobalState);
+        appGlobalViews.setCoursesForm(coursesFormView);
+        
+        LoginForm loginFormView = new LoginForm(appGlobalViews,appGlobalState);
+        RegistrationForm registrationFormView = new RegistrationForm(appGlobalViews,appGlobalState);
+        
+        appGlobalViews.setLoginFormView(loginFormView);
+        appGlobalViews.setRegistrationFormView(registrationFormView);
+        
+        appGlobalViews.getLoginFormView().setVisible(true);
     }
 }

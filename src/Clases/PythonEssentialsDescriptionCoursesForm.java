@@ -4,16 +4,10 @@ import javax.swing.JOptionPane;//Para hacer un label como Button
 public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
 
     
-    private CoursesForm coursesForm;
+    final private String  courseId = "PY";
     private AppGlobalState appGlobalState;
+    private AppGlobalViews appGlobalViews;
     
-    public void setCoursesForm(CoursesForm coursesForm) {
-        this.coursesForm = coursesForm;
-    }
-    
-    public void setAppGlobalState(AppGlobalState appGlobalState) {
-        this.appGlobalState = appGlobalState;
-    }
     
     public PythonEssentialsDescriptionCoursesForm() {
         initComponents();
@@ -60,24 +54,62 @@ public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
         });
         //UnionLatam, end
     }
+
+    public PythonEssentialsDescriptionCoursesForm(AppGlobalViews appGlobalViews ,AppGlobalState appGlobalState) {
+        this.appGlobalState = appGlobalState;
+        this.appGlobalViews = appGlobalViews;
+        initComponents();
+        int screenwidth = this.getWidth();
+        int screenheight = this.getHeight();
+        int formwidth = (int) (screenwidth*1);
+        int formheight = (int) (screenheight *1);
+        this.setLocationRelativeTo(this);
+        this.setSize(formwidth, formheight);
+        //Button buy, start
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        //Button buy, end
+        //Button back start
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        //Button back, end
+        //Account, start
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        //Account, end
+        //UnionLatam, start
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        //UnionLatam, end
+    }
+    
     //Button buy, start
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
-        
         if(appGlobalState.isUserLoggedIn()){
-
-            PaymentForm paymentForm = new PaymentForm(appGlobalState, "Python Essentials");
-
-            ActionPayment actionPayment = () -> {
-                this.setVisible(true);
-                paymentForm.dispose();
-            };
-
-            paymentForm.setActionPayment(actionPayment);
+            PaymentForm paymentForm = new PaymentForm(appGlobalViews,appGlobalState, "Python Essential",courseId,"10USD","Brian Higgins");
             paymentForm.setVisible(true);
             this.setVisible(false);
-        }
-
-
+       }
     }
     //Button buy, end
 
@@ -86,7 +118,7 @@ public class PythonEssentialsDescriptionCoursesForm extends javax.swing.JFrame {
      * @param evt
      */
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {
-        this.coursesForm.setVisible(true);
+        this.appGlobalViews.getCoursesForm().setVisible(true);
         this.setVisible(false);
     }
     //Account, start
