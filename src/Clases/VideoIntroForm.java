@@ -135,7 +135,7 @@ public class VideoIntroForm extends javax.swing.JFrame {
            
            setOpaque(false);
                
-           
+           //sds
            super.paint(g);
        }
    }
