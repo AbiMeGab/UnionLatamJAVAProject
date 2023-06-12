@@ -526,7 +526,7 @@ public class CoursesForm extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(coursePYId) != null){
-            JOptionPane.showMessageDialog(this, "You have already enrolled in this course");  
+            this.appGlobalViews.getCoursePython().setVisible(true);
             return;
         }
         this.appGlobalViews.getPythonDescriptionCoursesForm().setVisible(true);
@@ -535,7 +535,7 @@ public class CoursesForm extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(courseJSId) != null){
-            JOptionPane.showMessageDialog(this, "You have already enrolled in this course");  
+            this.appGlobalViews.getCourseJS().setVisible(true);
             return;
         }
         this.appGlobalViews.getjSDescriptionCoursesForm().setVisible(true);
@@ -544,7 +544,8 @@ public class CoursesForm extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         if(this.appGlobalState.isUserLoggedIn() && this.appGlobalState.getCurrentUser().getCourseById(courseJavaId) != null){
-            JOptionPane.showMessageDialog(this, "You have already enrolled in this course");  
+            this.appGlobalViews.getCourseJS().setVisible(true);
+            this.setVisible(false);
             return;
         }
         this.appGlobalViews.getJavaBasicDescriptionCoursesForm().setVisible(true);
