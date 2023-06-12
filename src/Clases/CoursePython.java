@@ -34,6 +34,16 @@ public class CoursePython extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(this);
         jLabel4.setForeground(Color.white);
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+    }
+    
+    public void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {
+        this.appGlobalViews.getCoursesForm().setVisible(true);
+        this.setVisible(false);
     }
 
     /**
