@@ -11,6 +11,11 @@ public class AppGlobalViews {
     private JavaBasicDescriptionCoursesForm javaBasicDescriptionCoursesForm = null;
     private JSDescriptionCoursesForm jSDescriptionCoursesForm = null;
     private PythonEssentialsDescriptionCoursesForm pythonDescriptionCoursesForm = null;
+    
+    private CourseJS courseJS = null;
+    private CourseJava courseJava = null;
+    private CoursePython coursePython = null;
+    
 
     public UserStorageMock getUserStorage() {
         return userStorage;
@@ -66,5 +71,29 @@ public class AppGlobalViews {
 
     public void setPythonDescriptionCoursesForm(PythonEssentialsDescriptionCoursesForm pythonDescriptionCoursesForm) {
         this.pythonDescriptionCoursesForm = pythonDescriptionCoursesForm;
+    }
+
+    public CourseJS getCourseJS() {
+        return courseJS;
+    }
+
+    public void setCourseJS(CourseJS courseJS) {
+        this.courseJS = courseJS;
+    }
+
+    public CourseJava getCourseJava() {
+        return courseJava;
+    }
+
+    public void setCourseJava(CourseJava courseJava) {
+        this.courseJava = courseJava;
+    }
+
+    public CoursePython getCoursePython() {
+        return coursePython;
+    }
+
+    public void setCoursePython(CoursePython coursePython) {
+        this.coursePython = coursePython;
     }
 }

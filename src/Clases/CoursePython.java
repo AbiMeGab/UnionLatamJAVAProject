@@ -16,10 +16,21 @@ import javax.swing.JPanel;
  */
 public class CoursePython extends javax.swing.JFrame {
 
+    private AppGlobalViews appGlobalViews;
+    private AppGlobalState appGlobalState;
+    
     /**
      * Creates new form CourseJS
      */
     public CoursePython() {
+        initComponents();
+        this.setLocationRelativeTo(this);
+        jLabel4.setForeground(Color.white);
+    }
+    
+    public CoursePython(AppGlobalViews appGlobalViews, AppGlobalState appGlobalState) {
+        this.appGlobalViews = appGlobalViews;
+        this.appGlobalState = appGlobalState;
         initComponents();
         this.setLocationRelativeTo(this);
         jLabel4.setForeground(Color.white);

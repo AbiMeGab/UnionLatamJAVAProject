@@ -15,6 +15,10 @@ import javax.swing.JPanel;
  * @author HP VICTUS
  */
 public class CourseJava extends javax.swing.JFrame {
+    
+    private AppGlobalViews appGlobalViews;
+    private AppGlobalState appGlobalState;
+    
 
     /**
      * Creates new form CourseJS
@@ -25,6 +29,13 @@ public class CourseJava extends javax.swing.JFrame {
         jLabel4.setForeground(Color.white);
     }
 
+    public CourseJava(AppGlobalViews appGlobalViews, AppGlobalState appGlobalState) {
+        this.appGlobalViews = appGlobalViews;
+        this.appGlobalState = appGlobalState;
+        initComponents();
+        this.setLocationRelativeTo(this);
+        jLabel4.setForeground(Color.white);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
