@@ -223,12 +223,12 @@
               <Font name="Courier New" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;Unleash your creative genius with our JavaScript Essentials course guided by &lt;p&gt; Professor Jack Lee. With over 10 years of industry experience and a Ph.D. in&lt;p&gt; Computer Science, Professor Lee will immerse you in captivating challenges and&lt;p&gt; practical projects, mastering variables, functions, DOM manipulation, and more.&lt;p&gt;&lt;p&gt; Benefit from his expertise in developing cutting-edge web applications, stay ahead&lt;p&gt; with the latest trends, and receive constant support from Professor Lee and a&lt;p&gt; vibrant learning community. Level up your web development skills and unlock a&lt;p&gt; future of limitless opportunities. Join now!&lt;html&gt;&quot;&#xa;" type="code"/>
+              <Connection code="&quot;&lt;html&gt;Unleash your creative genius and embark on an exciting coding adventure with our JavaScript Essentials course. Delve into the world of variables, functions, and DOM manipulation as you tackle captivating challenges and hands-on projects. With expert guidance and a vibrant learning community, you&apos;ll gain mastery over the foundations of web development. Stay ahead of the curve with the latest trends and unlock limitless opportunities in the ever-evolving tech industry. Join now and empower yourself with the skills to build cutting-edge web applications that leave a lasting impact.&lt;p&gt;Meet Professor Jack Lee, a seasoned expert in web development. With his extensive experience and cutting-edge knowledge, he&apos;ll guide you towards success. Enroll today and learn from the best!&lt;html&gt;&quot;&#xa;    " type="code"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="330" y="60" width="930" height="180"/>
+              <AbsoluteConstraints x="330" y="60" width="1080" height="200"/>
             </Constraint>
           </Constraints>
         </Component>

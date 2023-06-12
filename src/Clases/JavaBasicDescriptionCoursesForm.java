@@ -224,9 +224,9 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
-        jLabel4.setText("<html>Unleash your creative genius with our JavaScript Essentials course guided by <p> Professor Jack Lee. With over 10 years of industry experience and a Ph.D. in<p> Computer Science, Professor Lee will immerse you in captivating challenges and<p> practical projects, mastering variables, functions, DOM manipulation, and more.<p><p> Benefit from his expertise in developing cutting-edge web applications, stay ahead<p> with the latest trends, and receive constant support from Professor Lee and a<p> vibrant learning community. Level up your web development skills and unlock a<p> future of limitless opportunities. Join now!<html>"
+        jLabel4.setText("<html>Unleash your potential with our comprehensive Java from Beginner to Intermediate course. Dive into the world of Java programming and acquire a solid foundation in syntax, object-oriented principles, and application development. Through hands-on projects and real-world examples, you'll gain practical experience and confidence to tackle more advanced concepts. With Java as your toolkit, you'll be well-equipped to build robust software solutions. Don't wait any longer - join us and take your Java skills to the next level!<p>Meet Professor Dennis del Castillo, a distinguished authority in Java. With a Ph.D. in Software Engineering and extensive experience, elevate your Java skills in our course. Learn from the best!<html>"
         );
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 930, 180));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 930, 210));
 
         jLabel13.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         jLabel13.setText("<html>Key themes for the course:<html>"
@@ -234,9 +234,9 @@ public class JavaBasicDescriptionCoursesForm extends javax.swing.JFrame {
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 350, 40));
 
         jLabel14.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
-        jLabel14.setText("<html>1. Explore the world of web development.<p>2. Master JavaScript, the language behind the internet.<p>3. Build interactive and dynamic web applications.<p>4. Create stunning user interfaces.<p>5. Enhance user experiences through JavaScript.<html>"
+        jLabel14.setText("<html>1. Introduction to Java programming language.<p>2. Master the concepts of object-oriented programming (OOP).<p>3. Explore control structures, data types, and operators in Java.<p>4. Build interactive user interfaces using JavaFX.<p>5. Develop applications with file I/O and exception handling.<html>"
         );
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 640, 110));
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 840, 110));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/java.png"))); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 53, -1, -1));

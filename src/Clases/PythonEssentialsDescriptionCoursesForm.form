@@ -178,12 +178,12 @@
               <Font name="Courier New" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;1. Explore the world of web development.&lt;p&gt;2. Master JavaScript, the language behind the internet.&lt;p&gt;3. Build interactive and dynamic web applications.&lt;p&gt;4. Create stunning user interfaces.&lt;p&gt;5. Enhance user experiences through JavaScript.&lt;html&gt;&quot;&#xa;    " type="code"/>
+              <Connection code="&quot;&lt;html&gt;1. Dive into the world of Python programming.&lt;p&gt;2. Master the fundamentals of Python syntax and data structures.&lt;p&gt;3. Harness the power of Python libraries for data manipulation and analysis.&lt;p&gt;4. Build versatile applications using Python frameworks.&lt;p&gt;5. Gain insights into machine learning and data visualization with Python.&lt;html&gt;&quot;&#xa;    " type="code"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="310" width="640" height="110"/>
+              <AbsoluteConstraints x="90" y="310" width="890" height="110"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -208,12 +208,12 @@
               <Font name="Courier New" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;Unleash your creative genius with our JavaScript Essentials course guided by &lt;p&gt; Professor Jack Lee. With over 10 years of industry experience and a Ph.D. in&lt;p&gt; Computer Science, Professor Lee will immerse you in captivating challenges and&lt;p&gt; practical projects, mastering variables, functions, DOM manipulation, and more.&lt;p&gt;&lt;p&gt; Benefit from his expertise in developing cutting-edge web applications, stay ahead&lt;p&gt; with the latest trends, and receive constant support from Professor Lee and a&lt;p&gt; vibrant learning community. Level up your web development skills and unlock a&lt;p&gt; future of limitless opportunities. Join now!&lt;html&gt;&quot;&#xa;" type="code"/>
+              <Connection code="&quot;&lt;html&gt;Embark on a transformative journey with our Python Essentials course. Explore the power of Python as you delve into the fundamentals of programming, data manipulation, and algorithmic thinking. Master key concepts through engaging projects and practical exercises, and gain the skills to develop versatile applications. Ignite your passion for coding and unlock endless possibilities with Python. Enroll now and pave the way to a dynamic future!&lt;P&gt;&lt;P&gt; Introducing Professor Brian Higgins, a renowned expert in Python programming. With a Ph.D. in Computer Science and a remarkable track record, learn from his invaluable expertise in Python Essentials.&lt;html&gt;&quot;&#xa;    " type="code"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="330" y="60" width="930" height="180"/>
+              <AbsoluteConstraints x="330" y="60" width="930" height="210"/>
             </Constraint>
           </Constraints>
         </Component>

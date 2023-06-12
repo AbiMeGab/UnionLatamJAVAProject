@@ -231,9 +231,9 @@ public class JSDescriptionCoursesForm extends javax.swing.JFrame {
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 640, 110));
 
         jLabel4.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
-        jLabel4.setText("<html>Unleash your creative genius with our JavaScript Essentials course guided by <p> Professor Jack Lee. With over 10 years of industry experience and a Ph.D. in<p> Computer Science, Professor Lee will immerse you in captivating challenges and<p> practical projects, mastering variables, functions, DOM manipulation, and more.<p><p> Benefit from his expertise in developing cutting-edge web applications, stay ahead<p> with the latest trends, and receive constant support from Professor Lee and a<p> vibrant learning community. Level up your web development skills and unlock a<p> future of limitless opportunities. Join now!<html>"
+        jLabel4.setText("<html>Unleash your creative genius and embark on an exciting coding adventure with our JavaScript Essentials course. Delve into the world of variables, functions, and DOM manipulation as you tackle captivating challenges and hands-on projects. With expert guidance and a vibrant learning community, you'll gain mastery over the foundations of web development. Stay ahead of the curve with the latest trends and unlock limitless opportunities in the ever-evolving tech industry. Join now and empower yourself with the skills to build cutting-edge web applications that leave a lasting impact.<p>Meet Professor Jack Lee, a seasoned expert in web development. With his extensive experience and cutting-edge knowledge, he'll guide you towards success. Enroll today and learn from the best!<html>"
         );
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 930, 180));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 1080, 200));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ButtonBuy.png"))); // NOI18N
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
